@@ -26,9 +26,9 @@ function firstRepeatingLetter(str) {
 	return 'No repeats'
 }
 
-firstRepeatingLetter('Grace Hopper Academy') //-> returns "r"
-firstRepeatingLetter('Shanna Gregory') //-> returns "a"
-firstRepeatingLetter('David Nimit') //-> returns "d"
+firstRepeatingLetter('Grace Hopper') //-> returns "r"
+firstRepeatingLetter('Shanna') //-> returns "a"
+firstRepeatingLetter('Nimit') //-> returns "d"
 
 function getHeight(cycles) {
 	let height = 1
@@ -93,3 +93,95 @@ function sumAll(arr) {
 }
 
 sumAll([1, 4])
+
+function factorialize(num) {
+	if (num === 0) {
+		return 1
+	}
+	for (var i = num - 1; i >= 1; i--) {
+		console.log(i)
+		num *= i
+	}
+
+	return num
+}
+
+factorialize(5)
+
+function findLongestWord(str) {
+	var count = 0
+	var newStr = str.split(' ')
+	// console.log(newStr)
+	for (var i = 0; i < newStr.length; i++) {
+		if (newStr[i].length > count) {
+			count = newStr[i].length
+		}
+	}
+	return count
+}
+
+findLongestWord('May the force be with you')
+
+function findLongestWord(str) {
+	var array = str.split(' ')
+	var newArr = array.sort(function (a, b) {
+		return b.length - a.length
+	})
+	return newArr[0].length
+}
+findLongestWord('The quick brown fox jumped over the lazy dog')
+
+function titleCase(str) {
+	var newStr = str.toLowerCase().split(' ')
+	//newStr.toLowerCase()
+	console.log(newStr)
+
+	var newString = newStr.map(function (val) {
+		return val.replace(val.charAt(0), val.charAt(0).toUpperCase())
+	})
+
+	return newString.join(' ')
+}
+
+titleCase("I'm a little tea pot")
+
+function largestOfFour(arr) {
+	var newArr = []
+	for (var i = 0; i < arr.length; i++) {
+		var largest = arr[i][0]
+		for (var j = 0; j < arr[i].length; j++) {
+			if (arr[i][j] > largest) {
+				largest = arr[i][j]
+				console.log(largest, 'iteration')
+				console.log(arr[0][1])
+			}
+		}
+		newArr.push(largest)
+	}
+	return newArr
+}
+
+largestOfFour([
+	[4, 5, 1, 3],
+	[13, 27, 18, 26],
+	[32, 35, 37, 39],
+	[1000, 1001, 857, 1],
+])
+
+function myMnemonic(str1, str2, str3, str4) {
+	let newStr = ''
+	if (str1 !== undefined) {
+		newStr += str1[0]
+	}
+	if (str2 !== undefined) {
+		newStr += str2[0]
+	}
+	if (str3 !== undefined) {
+		newStr += str3[0]
+	}
+	if (str4 !== undefined) {
+		newStr += str4[0]
+	}
+	return newStr
+}
+myMnemonic('Must', 'Accept', 'Sugar', 'Happiness') // => MASH
