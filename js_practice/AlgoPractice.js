@@ -988,3 +988,47 @@ const changeScene = censor();
 changeScene('dogs', 'cats');
 changeScene('quick', 'slow');
 console.log(changeScene('The quick, brown fox jumps over the lazy dogs.')); // should log: 'The slow, brown fox jumps over the lazy cats.'
+
+
+function updateInventory(arr1, arr2) {
+
+arr1.forEach((elem) => {
+	arr2.forEach((elem1) => {
+		if(elem[1] === elem1[1]){
+			elem[0] += elem1[0]
+		}
+	})
+})
+
+let curI = arr1.map((ele) => ele[1])
+let newI = arr2.map((ele) => ele[1])
+
+ arr2.forEach((ele) => {
+	if(!curI.includes(ele[1])){
+		 arr1.push(ele)
+	}
+	})
+
+    return arr1.sort((a,b) => {
+	 		if(a[1] < b[1]) { return -1; }
+		  if(a[1] > b[1]) { return 1; }
+  		return 0;
+	})
+}
+
+// Example inventory lists
+var curInv = [
+		 [2, "Dirty Sock"],
+    [21, "Bowling Ball"],
+    [1, "Hair Pin"],
+    [5, "Microphone"]
+];
+
+var newInv = [
+    [2, "Hair Pin"],
+    [3, "Half-Eaten Apple"],
+    [67, "Bowling Ball"],
+    [7, "Toothpaste"]
+];
+
+updateInventory(curInv, newInv);
