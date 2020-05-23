@@ -1010,9 +1010,7 @@ let newI = arr2.map((ele) => ele[1])
 	})
 
     return arr1.sort((a,b) => {
-	 		if(a[1] < b[1]) { return -1; }
-		  if(a[1] > b[1]) { return 1; }
-  		return 0;
+	 			return a[1] > b[1] ? 1 : -1;
 	})
 }
 
@@ -1031,4 +1029,4 @@ var newInv = [
     [7, "Toothpaste"]
 ];
 
-updateInventory(curInv, newInv);
+updateInventory(curInv, newInv)
