@@ -1,3 +1,63 @@
+/* Challenge - Practice using Numbers  
+
+Challenge - Create an Arithmetic Expression that uses three mathematical operators (+,-,/,*) that returns the date
+of the current year.
+
+EX: 2000 + 18 - 2 * 1;
+
+
+Challenge 1: Current Year - WRITE CODE BELOW
+
+*/
+console.log(3000-1000+19 * 1)
+/* Challenge - Practice using Numbers  
+
+
+
+
+Challenge - Create an Arithmetic Expression that uses four mathematical operators (+,-,/,*) 
+that returns your current age.
+
+EX: (9+1)*6/2-1;
+
+*/ 
+
+// Challenge 2: Current Age - WRITE CODE BELOW
+console.log((27 / 3) + 20 - 2 * 1)
+
+
+/* Challenge - Practice using Strings  
+
+Challenge - Create a String by surrounding characters with an apostrophe or quotation marks.  
+Call the toUpperCase() method on the string. 
+
+NOTE: We will cover methods in more detail in future section.
+
+EX: "javascript jumpstart".toUpperCase()
+OUTPUT: "JAVASCRIPT JUMPSTART";
+
+*/ 
+console.log("Let the games begin".toUpperCase())
+// Challenge 3: toUpperCase() - WRITE CODE BELOW
+
+
+/* Challenge - Practice using Strings  
+
+Challenge - Create a String by surrounding characters with an apostrophe or quotation marks.  Call the toLowerCase() method
+on the string. 
+
+NOTE: We will cover methods in more detail in future section.
+
+EX: "FULLSTACK ACADEMEY".toLowerCase()
+OUTPUT: "fullstack academy";
+
+*/
+console.log("HOCUS POCUS".toLowerCase())
+// Challenge 4: toLowerCase() - WRITE CODE BELOW
+
+
+
+
 function palindrome(str) {
 	debugger
 	let newStr = str.toLowerCase()
@@ -1001,7 +1061,6 @@ arr1.forEach((elem) => {
 })
 
 let curI = arr1.map((ele) => ele[1])
-let newI = arr2.map((ele) => ele[1])
 
  arr2.forEach((ele) => {
 	if(!curI.includes(ele[1])){
