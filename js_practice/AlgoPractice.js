@@ -400,7 +400,7 @@ if(grade >= 90){
 return result
 }
 
-Uncomment the lines below to test your code
+
 
 console.log(gradeCalculator(92)); //=> "A"
 console.log(gradeCalculator(84)); //=> "B"
@@ -446,7 +446,6 @@ objOfMatches(arr1, arr2, uppercaser); // should log: { hi: 'HI', bye: 'BYE', hel
 
 
    
-
    
 function uppercaser(str) { return str.toUpperCase(); }
 function capitalize(str) { return str[0].toUpperCase() + str.slice(1).toLowerCase(); }
@@ -467,7 +466,7 @@ for(let i = 0; i < test.length; i++){
 return newArr
 }
 console.log(multiMap(items, functions)); 
-should log: { catfood: ['CATFOOD', 'Catfood', 'catfoodcatfood'], glue: ['GLUE', 'Glue', 'glueglue'], beer: ['BEER', 'Beer', 'beerbeer'] }
+ { catfood: ['CATFOOD', 'Catfood', 'catfoodcatfood'], glue: ['GLUE', 'Glue', 'glueglue'], beer: ['BEER', 'Beer', 'beerbeer'] }
 
    
 function majority(arr, callback){
@@ -579,18 +578,15 @@ var sunny = { mac: 'priest', dennis: 'calculating', charlie: 'birdlaw', dee: 'bi
 
 function goodKeys(obj, callback){
   let base = [];
-	let callbackResult;
-	for(prop in obj){
+  let callbackResult;
+  for(prop in obj){
 	callbackResult = callback(obj[prop])
-if(callbackResult === true){
-	base.push(prop)
+	if(callbackResult === true){
+		base.push(prop)
 	}
+  }
+	return base
 }
-		return base
-		}
-
-
-//    
 
 function startsWithBird(str) { return str.slice(0, 4).toLowerCase() === 'bird'; };
 
@@ -1073,6 +1069,7 @@ let curI = arr1.map((ele) => ele[1])
 	})
 }
 
+	// test
 // Example inventory lists
 var curInv = [
 		 [2, "Dirty Sock"],
