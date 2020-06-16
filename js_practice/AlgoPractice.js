@@ -1069,7 +1069,7 @@ let curI = arr1.map((ele) => ele[1])
 	})
 }
 
-	// test
+// test
 // Example inventory lists
 var curInv = [
 		 [2, "Dirty Sock"],
