@@ -12,7 +12,7 @@ In ELI5 terms, when dealing with a problem or a task such as **'write a function
 
 With Big-O notation we get numeric representation of how efficient our code is.
 
-### Who Does This Matter?
+### Why Does This Matter?
 
 1. Knowing Big-O is important because it allows you to understand how your code is running and performing
 
