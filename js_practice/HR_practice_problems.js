@@ -1,5 +1,4 @@
 /*
-
 Write a function called "getAllLetters".
 
 Given a word, "getAllLetters" returns an array containing every character in the word.
@@ -10,30 +9,24 @@ If given an empty string, it should return an empty array.
 You should be familiar with the 'split' method.
 
 */
+
 function getAllLetters(str) {
-	return !str ? [] : str.split('').join('').split('')
+	if(!str){
+		return []
+	} else {
+		return str.split('').join('').split('')
+	}
 }
 
-var output = getAllLetters('Radagast')
-console.log(output) // --> ['R', 'a', 'd', 'a', 'g', 'a', 's', 't']
-
-/*
-Write a function called "getAllWords".
-
-Given a sentence, "getAllWords" returns an array containing every word in the sentence.
-
-Notes:
-
-If given an empty string, it should return an empty array.
-You should be familiar with the 'split' method.
-*/
+var outputOne = getAllLetters('Radagast')
+console.log(outputOne) // --> ['R', 'a', 'd', 'a', 'g', 'a', 's', 't']
 
 function getAllWords(str) {
 	return !str ? [] : str.split(' ')
 }
 
-var output = getAllWords('Radagast the Brown')
-console.log(output) // --> ['Radagast', 'the', 'Brown']
+var outputTwo = getAllWords('Radagast the Brown')
+// console.log(outputTwo) // --> ['Radagast', 'the', 'Brown']
 
 /*
 
@@ -63,8 +56,8 @@ function countWords(str) {
 	return newObj
 }
 
-var output = countWords('ask a bunch get a bunch')
-console.log(output) // --> {ask: 1, a: 2, bunch: 2, get: 1}
+var outputThree = countWords('ask a bunch get a bunch')
+// console.log(outputThree) // --> {ask: 1, a: 2, bunch: 2, get: 1}
 
 /*
  Write a function called "or".
@@ -80,8 +73,8 @@ function or(expression1, expression2) {
 	return expression1 === true ? true : expression2 === true ? true : false
 }
 
-var output = or(true, false)
-console.log(output) // --> true;
+var outputFour = or(true, false)
+// console.log(outputFour) // --> true;
 
 /*
 Write a function called "isEitherEvenOrAreBoth7".
@@ -95,11 +88,11 @@ function isEitherEvenOrAreBoth7(num1, num2) {
 
 // A little unreadable, but I just wanted practice with ternary
 
-var output = isEitherEvenOrAreBoth7(3, 7)
-console.log(output) // --> false
+var outputFive = isEitherEvenOrAreBoth7(3, 7)
+// console.log(outputFive) // --> false
 
-var output = isEitherEvenOrAreBoth7(2, 3)
-console.log(output) // --> true
+var outputFive= isEitherEvenOrAreBoth7(2, 3)
+// console.log(outputFive) // --> true
 
 /*
 Write a function called "isEitherEvenAndLessThan9".
@@ -112,11 +105,11 @@ function isEitherEvenAndLessThan9(num1, num2) {
 	return num1 < 9 && num2 < 9 && num1 % 2 === 0 ? true : num1 < 9 && num2 < 9 && num2 % 2 === 0 ? true : false
 }
 
-var output = isEitherEvenAndLessThan9(2, 4)
-console.log(output) // --> true
+var outputSix = isEitherEvenAndLessThan9(2, 4)
+console.log(outputSix) // --> true
 
-var output = isEitherEvenAndLessThan9(72, 2)
-console.log(output) // --> false
+var outputSix = isEitherEvenAndLessThan9(72, 2)
+console.log(outputSix) // --> false
 
 /*
 
@@ -142,7 +135,7 @@ var obj2 = {
 
 function extend(obj1, obj2) {
 	for (let key in obj2) {
-		if (!obj1[key]) {
+		if(!obj1[key]) {
 			obj1[key] = obj2[key]
 		}
 	}

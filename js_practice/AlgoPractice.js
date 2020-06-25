@@ -5,7 +5,6 @@ of the current year.
 
 EX: 2000 + 18 - 2 * 1;
 
-
 Challenge 1: Current Year - WRITE CODE BELOW
 
 */
@@ -54,7 +53,6 @@ OUTPUT: "fullstack academy";
 */
 console.log("HOCUS POCUS".toLowerCase())
 // Challenge 4: toLowerCase() - WRITE CODE BELOW
-
 
 
 
@@ -182,14 +180,14 @@ function findLongestWord(str) {
 
 findLongestWord('May the force be with you')
 
-function findLongestWord(str) {
-	var array = str.split(' ')
-	var newArr = array.sort(function (a, b) {
-		return b.length - a.length
-	})
-	return newArr[0].length
-}
-findLongestWord('The quick brown fox jumped over the lazy dog')
+// function findLongestWord(str) {
+// 	var array = str.split(' ')
+// 	var newArr = array.sort(function (a, b) {
+// 		return b.length - a.length
+// 	})
+// 	return newArr[0].length
+// }
+// findLongestWord('The quick brown fox jumped over the lazy dog')
 
 function titleCase(str) {
 	var newStr = str.toLowerCase().split(' ')
@@ -447,7 +445,7 @@ objOfMatches(arr1, arr2, uppercaser); // should log: { hi: 'HI', bye: 'BYE', hel
 
    
    
-function uppercaser(str) { return str.toUpperCase(); }
+// function uppercaser(str) { return str.toUpperCase(); }
 function capitalize(str) { return str[0].toUpperCase() + str.slice(1).toLowerCase(); }
 function repeater(str) { return str + str; }
 var items = ['catfood', 'glue', 'beer'];
@@ -466,7 +464,7 @@ for(let i = 0; i < test.length; i++){
 return newArr
 }
 console.log(multiMap(items, functions)); 
- { catfood: ['CATFOOD', 'Catfood', 'catfoodcatfood'], glue: ['GLUE', 'Glue', 'glueglue'], beer: ['BEER', 'Beer', 'beerbeer'] }
+//  { catfood: ['CATFOOD', 'Catfood', 'catfoodcatfood'], glue: ['GLUE', 'Glue', 'glueglue'], beer: ['BEER', 'Beer', 'beerbeer'] }
 
    
 function majority(arr, callback){
@@ -535,14 +533,14 @@ function evenOdd(n) {
   else return 'odd';
 }
 var nums = [1, 2, 3, 4, 5];
-console.log(countBy(nums, evenOdd)); // should log: { odd: 3, even: 2 }
+console.log(countBy(nums, evenAndOdd)); // should log: { odd: 3, even: 2 }
 
 
    
 var decimals = [1,2,3,4,5].sort();
 // console.log(decimals)
 var floored = function(num) { return Math.floor(num); };
-var evenOdd = function(num) { return num % 2 === 0; };
+var evenAndOdd = function(num) { return num % 2 === 0; };
 
 function groupBy(arr, callback){
 debugger
@@ -563,16 +561,16 @@ groupBy(decimals, floored); // should log: { 1: [1.3], 2: [2.1, 2.4] }
 
 groupBy(decimals, evenOdd)
 
-for(let i = 0; i < mapped.length; i++){
-	if(!newObj[mapped[i]]){
-		if(Math.floor(arr[i])=== mapped[i]){
-			 newObj[mapped[i]] = [arr[i]]
-		}
-	} else {
-		if(Math.floor(arr[i]) === mapped[i]){
-			newObj[mapped[i]].push(arr[i])
-	}
-}
+// for(let i = 0; i < mapped.length; i++){
+// 	if(!newObj[mapped[i]]){
+// 		if(Math.floor(arr[i])=== mapped[i]){
+// 			 newObj[mapped[i]] = [arr[i]]
+// 		}
+// 	} else {
+// 		if(Math.floor(arr[i]) === mapped[i]){
+// 			newObj[mapped[i]].push(arr[i])
+// 	}
+// }
 
 var sunny = { mac: 'priest', dennis: 'calculating', charlie: 'birdlaw', dee: 'bird', frank: 'warthog'};
 
@@ -676,9 +674,7 @@ console.log(storedStrings)
 
 
 function makePerson(name, age) {
-let obj = {name: name,
- age: age};
-
+let obj = {name: name, age: age};
 return obj
 
 
@@ -787,7 +783,7 @@ console.log(map([3,4,5], subtractTwo))
 
 
 //    
-function groupBy(array,callback){
+function groupy(array,callback){
   let arr = []
   let obj = {};
 let called = array.map(function(val){
@@ -807,11 +803,11 @@ let called = array.map(function(val){
 //    
 const decimals = [1.3, 2.1, 2.4];
 const floored = function(num) { return Math.floor(num); };
-console.log(groupBy(decimals, floored)); // should log: { 1: [1.3], 2: [2.1, 2.4] }
+// console.log(groupBy(decimals, floored)); // should log: { 1: [1.3], 2: [2.1, 2.4] }
 
 
    
-function goodKeys(obj,callback){
+function good_Keys(obj,callback){
 let newArr = []
 for(let props in obj){
 if(callback(obj[props])){
