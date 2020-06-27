@@ -73,3 +73,48 @@ We also have two assignments of total and `i = 1` . There is also the comparison
 **Solution A** => O(n)
 
 ---
+
+Lets look at something like:
+
+```javascript
+function letsPair(n) {
+  for (let i = 0; i < n; i++) {
+    for (let j = 0; j < n; j++) {
+      console.log(i, j);
+    }
+  }
+}
+```
+
+In this example, there is one loop which would be considered `O(n)`, but this time there is nested inside of it another loop that is also `O(n)`. In this case, this is not `O(2n)` but instead `O(n^2)` . As _n_ grows larger, the runtime takes even longer. If the array has 10 items, we have to print 100 times.
+
+## Drop the Constants
+
+One of the best things about Big-O is that we are focused on the big picture and not so much how many operations are happening. For example:
+
+```javascript
+function twoLoops(arr) {
+  for (let number of arr) {
+    console.log(number);
+  }
+
+  for (let number of arr) {
+    console.log(number);
+  }
+}
+```
+
+This would be considered of `O(2n)` but we can just get drop the constant and instead write `O(n)`.
+
+Like the above, an example such as `O((n+100)∗(n+20)) is O(n^2)`
+
+## Big O Shortcuts
+
+1. Arthmetic operations are constant
+2. Assignment is constant
+3. Accessing data via index or key is constant
+4. In a loop, the complexity is the length of the loop times the complexity of what happens inside of the loop.
+
+## Space Complexity
+
+Big-O Notation can be used to look at space complexity. This means how much additional memory we may need to run such code.
