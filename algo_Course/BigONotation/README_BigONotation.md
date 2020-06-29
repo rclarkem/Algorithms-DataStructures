@@ -118,3 +118,51 @@ Like the above, an example such as `O((n+100)∗(n+20)) is O(n^2)`
 ## Space Complexity
 
 Big-O Notation can be used to look at space complexity. This means how much additional memory we may need to run such code.
+
+Most Primitives are constant space:
+
+- Booleans
+- Numbers
+- Undefined
+- Null
+
+EXCEPTION:
+
+1. Strings => `O(n)` space because of length
+2. Arrays or Objects => `O(n)` where space is the length of array or keys of object.
+
+Code Examples:
+
+Solution A:
+
+```javascript
+function sumOfNums(arr) {
+  let sum = 0;
+  for (let i = 0; i < arr.length; i++) {
+    sum += arr[i];
+  }
+  return sum;
+}
+```
+
+**In solution A** => `O(n)` because there is not any additional space being created. To say that the `sum` variable gets reinitialized with a new value from the array, but it takes up a constant space. No matter the size of the input
+
+Solution B:
+
+```javascript
+function lengthOfArr(n) {
+  let newArr = [1, 4, 3, 2];
+  for (let i = 0; i < n; i++) {
+    newArr.push(i);
+  }
+  return newArr;
+}
+```
+
+**In solution B,** As the array length grows as the input grows, the space increases and thus it because `O(n)`.
+
+## Resources
+
+[Big O Notation Video](https://www.youtube.com/watch?v=v4cd1O4zkGw)
+
+[Khan Academy Post on Big O Notation](https://www.khanacademy.org/computing/computer-science/algorithms/asymptotic-notation/a/big-o-notation)
