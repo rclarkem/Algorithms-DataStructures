@@ -11,21 +11,21 @@ You should be familiar with the 'split' method.
 */
 
 function getAllLetters(str) {
-	if(!str){
-		return []
-	} else {
-		return str.split('').join('').split('')
-	}
+  if (!str) {
+    return [];
+  } else {
+    return str.split('').join('').split('');
+  }
 }
 
-var outputOne = getAllLetters('Radagast')
-console.log(outputOne) // --> ['R', 'a', 'd', 'a', 'g', 'a', 's', 't']
+var outputOne = getAllLetters('Radagast');
+console.log(outputOne); // --> ['R', 'a', 'd', 'a', 'g', 'a', 's', 't']
 
 function getAllWords(str) {
-	return !str ? [] : str.split(' ')
+  return !str ? [] : str.split(' ');
 }
 
-var outputTwo = getAllWords('Radagast the Brown')
+var outputTwo = getAllWords('Radagast the Brown');
 // console.log(outputTwo) // --> ['Radagast', 'the', 'Brown']
 
 /*
@@ -40,23 +40,23 @@ If given an empty string, it should return an empty object.
 
 */
 function countWords(str) {
-	let newObj = {}
-	if (!str) {
-		return newObj
-	} else {
-		let splittedStr = str.split(' ')
-		for (let word of splittedStr) {
-			if (newObj[word]) {
-				newObj[word]++
-			} else {
-				newObj[word] = 1
-			}
-		}
-	}
-	return newObj
+  let newObj = {};
+  if (!str) {
+    return newObj;
+  } else {
+    let splittedStr = str.split(' ');
+    for (let word of splittedStr) {
+      if (newObj[word]) {
+        newObj[word]++;
+      } else {
+        newObj[word] = 1;
+      }
+    }
+  }
+  return newObj;
 }
 
-var outputThree = countWords('ask a bunch get a bunch')
+var outputThree = countWords('ask a bunch get a bunch');
 // console.log(outputThree) // --> {ask: 1, a: 2, bunch: 2, get: 1}
 
 /*
@@ -70,10 +70,10 @@ Use ! and && operators instead.
  */
 
 function or(expression1, expression2) {
-	return expression1 === true ? true : expression2 === true ? true : false
+  return expression1 === true ? true : expression2 === true ? true : false;
 }
 
-var outputFour = or(true, false)
+var outputFour = or(true, false);
 // console.log(outputFour) // --> true;
 
 /*
@@ -83,15 +83,19 @@ Given two numbers, 'isEitherEvenOrAreBoth7' returns whether at least one of them
 */
 
 function isEitherEvenOrAreBoth7(num1, num2) {
-	return num1 === 7 && num2 === 7 ? true : num1 % 2 === 0 || num2 % 2 === 0 ? true : false
+  return num1 === 7 && num2 === 7
+    ? true
+    : num1 % 2 === 0 || num2 % 2 === 0
+    ? true
+    : false;
 }
 
 // A little unreadable, but I just wanted practice with ternary
 
-var outputFive = isEitherEvenOrAreBoth7(3, 7)
+var outputFive = isEitherEvenOrAreBoth7(3, 7);
 // console.log(outputFive) // --> false
 
-var outputFive= isEitherEvenOrAreBoth7(2, 3)
+var outputFive = isEitherEvenOrAreBoth7(2, 3);
 // console.log(outputFive) // --> true
 
 /*
@@ -102,14 +106,18 @@ Given two numbers, 'isEitherEvenAndLessThan9' returns whether at least one of th
 */
 
 function isEitherEvenAndLessThan9(num1, num2) {
-	return num1 < 9 && num2 < 9 && num1 % 2 === 0 ? true : num1 < 9 && num2 < 9 && num2 % 2 === 0 ? true : false
+  return num1 < 9 && num2 < 9 && num1 % 2 === 0
+    ? true
+    : num1 < 9 && num2 < 9 && num2 % 2 === 0
+    ? true
+    : false;
 }
 
-var outputSix = isEitherEvenAndLessThan9(2, 4)
-console.log(outputSix) // --> true
+var outputSix = isEitherEvenAndLessThan9(2, 4);
+console.log(outputSix); // --> true
 
-var outputSix = isEitherEvenAndLessThan9(72, 2)
-console.log(outputSix) // --> false
+var outputSix = isEitherEvenAndLessThan9(72, 2);
+console.log(outputSix); // --> false
 
 /*
 
@@ -125,24 +133,145 @@ Do not modify the 2nd object at all.
 */
 
 var obj1 = {
-	a: 1,
-	b: 2,
-}
+  a: 1,
+  b: 2,
+};
 var obj2 = {
-	b: 4,
-	c: 3,
-}
+  b: 4,
+  c: 3,
+};
 
 function extend(obj1, obj2) {
-	for (let key in obj2) {
-		if(!obj1[key]) {
-			obj1[key] = obj2[key]
-		}
-	}
-	return obj1
+  for (let key in obj2) {
+    if (!obj1[key]) {
+      obj1[key] = obj2[key];
+    }
+  }
+  return obj1;
 }
 
-extend(obj1, obj2)
+extend(obj1, obj2);
 
-console.log(obj1) // --> {a: 1, b: 2, c: 3}
-console.log(obj2) // --> {b: 4, c: 3}
+console.log(obj1); // --> {a: 1, b: 2, c: 3}
+console.log(obj2); // --> {b: 4, c: 3}
+
+/*Write a function called "removeStringValues".
+
+Given an object, "removeStringValues" removes any properties on the given object whose values are strings.
+
+var obj = {
+  name: 'Sam',
+  age: 20
+}
+removeStringValues(obj);
+console.log(obj); // { age: 20 }*/
+
+function removeStringValues(obj) {
+  for (let prop in obj) {
+    if (typeof obj[prop] === 'string') {
+      delete obj[prop];
+    }
+  }
+  return obj;
+}
+
+/*
+Write a function called "removeNumberValues".
+
+Given an object, "removeNumberValues" removes any properties whose values are numbers.
+
+var obj = {
+  a: 2,
+  b: 'remaining',
+  c: 4
+};
+removeNumberValues(obj);
+console.log(obj); // --> { b: 'remaining' }
+*/
+
+function removeNumberValues(obj) {
+  for (let prop in obj) {
+    if (typeof obj[prop] === 'number') {
+      delete obj[prop];
+    }
+  }
+  return obj;
+}
+/*Write a function called "removeArrayValues".
+
+Given an object, "removeArrayValues" removes any properties whose values are arrays.
+
+var obj = {
+  a: [1, 3, 4],
+  b: 2,
+  c: ['hi', 'there']
+}
+removeArrayValues(obj);
+console.log(obj); // --> { b: 2 }*/
+
+function removeArrayValues(obj) {
+  for (let prop in obj) {
+    if (Array.isArray(obj[prop])) {
+      delete obj[prop];
+    }
+  }
+  return obj;
+}
+
+/*Write a function called "removeNumbersLargerThan".
+
+Given a number and an object, "removeNumbersLargerThan" removes any properties whose values are numbers greater than the given number.
+
+var obj = {
+  a: 8,
+  b: 2,
+  c: 'montana'
+}
+removeNumbersLargerThan(5, obj);
+console.log(obj); // --> { b: 2, c: 'montana' }*/
+function removeNumbersLargerThan(num, obj) {
+  for (let prop in obj) {
+    if (typeof obj[prop] === 'number' && obj[prop] > num) {
+      delete obj[prop];
+    }
+  }
+}
+
+/*Write a function called "removeNumbersLessThan".
+
+Given a number and an object, "removeNumbersLessThan" removes any properties whose values are numbers less than the given number.
+
+var obj = {
+  a: 8,
+  b: 2,
+  c: 'montana'
+}
+removeNumbersLessThan(5, obj);
+console.log(obj); // --> { a: 8, c: 'montana' }*/
+function removeNumbersLessThan(num, obj) {
+  for (let prop in obj) {
+    if (typeof obj[prop] === 'number' && obj[prop] < num) {
+      delete obj[prop];
+    }
+  }
+}
+
+/*Write a function called "removeStringValuesLongerThan".
+
+Given an number and an object, "removeStringValuesLongerThan" removes any properties on the given object whose values are strings longer than the given number.
+
+var obj = {
+  name: 'Montana',
+  age: 20,
+  location: 'Texas'
+};
+removeStringValuesLongerThan(6, obj);
+console.log(obj); // { age: 20, location: 'Texas' }*/
+function removeStringValuesLongerThan(num, obj) {
+  for (let prop in obj) {
+    if (typeof obj[prop] === 'string' && obj[prop].length > num) {
+      delete obj[prop];
+    }
+  }
+  return obj;
+}
