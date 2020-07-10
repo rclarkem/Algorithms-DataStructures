@@ -330,3 +330,47 @@ console.log(output); // --> 3
 function countNumberOfKeys(obj) {
   return Object.keys(obj).length
 }
+
+/* Write a function called "convertDoubleSpaceToSingle".
+
+Given a string, "convertDoubleSpaceToSingle" returns the passed in string, with all the double spaces converted to single spaces.
+
+var output = convertDoubleSpaceToSingle("string  with  double  spaces");
+console.log(output); // --> "string with double spaces"
+Notes:
+
+In order to do this problem, you should be familiar with "String.split", and "Array.join". */
+
+function convertDoubleSpaceToSingle(str) {
+  return str.split("  ").join(" ")
+}
+
+/* Write a function called "joinThreeArrays".
+
+Given three arrays, "joinThreeArrays" returns an array with the elements of "arr1" in order followed by the elements in "arr2" in order followed by the elements of "arr3" in order.
+
+var output = joinThreeArrays([1, 2], [3, 4], [5, 6]);
+console.log(output); // --> [1, 2, 3, 4, 5, 6]
+You should be familiar with the "concat" method for this problem. */
+function joinThreeArrays(arr1, arr2, arr3) {
+  return [].slice.call(arguments).reduce((acc, cur) => acc.concat(cur), [])
+}
+
+
+/*
+Write a function called "addToFrontOfNew".
+
+Given an array and an element, "addToFrontOfNew" returns a new array containing all the elements of the given array, with the given element added to the front.
+
+Important: It should be a NEW array instance, not the original array instance.
+
+var input = [1, 2];
+var output = addToFrontOfNew(input, 3);
+console.log(output); // --> [3, 1, 2];
+console.log(input); // --> [1, 2]
+*/
+function addToFrontOfNew(arr, element) {
+  let newArr = arr.slice(0)
+  newArr.unshift(element)
+  return newArr
+}
