@@ -356,9 +356,7 @@ function joinThreeArrays(arr1, arr2, arr3) {
   return [].slice.call(arguments).reduce((acc, cur) => acc.concat(cur), [])
 }
 
-
-/*
-Write a function called "addToFrontOfNew".
+/* Write a function called "addToFrontOfNew".
 
 Given an array and an element, "addToFrontOfNew" returns a new array containing all the elements of the given array, with the given element added to the front.
 
@@ -367,10 +365,152 @@ Important: It should be a NEW array instance, not the original array instance.
 var input = [1, 2];
 var output = addToFrontOfNew(input, 3);
 console.log(output); // --> [3, 1, 2];
-console.log(input); // --> [1, 2]
-*/
+console.log(input); // --> [1, 2] */
 function addToFrontOfNew(arr, element) {
-  let newArr = arr.slice(0)
+  let newArr = arr.slice()
   newArr.unshift(element)
   return newArr
+}
+
+/* Write a function called "addToBackNew".
+
+Given an array and an element, "addToBackNew" returns a clone of the given array, with the given element added to the end.
+
+Important: It should be a NEW array instance, not the original array instance.
+
+var input = [1, 2];
+var output = addToBackOfNew(input, 3);
+console.log(input); // --> [1, 2]
+console.log(output); // --> [1, 2, 3] */
+function addToBackOfNew(arr, element) {
+  let newArr = arr.slice()
+  newArr.push(element)
+  return newArr
+}
+
+/* Write a function called "getAllElementsButNth".
+
+Given an array and an index, "getAllElementsButNth" returns an array with all the elements but the nth.
+
+var output = getAllElementsButNth(['a', 'b', 'c'], 1);
+console.log(output); // --> ['a', 'c'] */
+function getAllElementsButNth(array, n) {
+  array.splice(n, 1)
+  return array
+}
+
+/* Write a function called "getIndexOf".
+
+Given a character and a string, "getIndexOf" returns the first position of the given character in the given string.
+
+Notes:
+
+Strings are zero indexed, meaning the first character in a string is at position 0.
+When a string contains more than one occurrence of a character, it should return the index of its first occurrence.
+If the character does not exist in the string, it should return -1.
+Do not use the native indexOf function in your implementation.
+var output = getIndexOf('a', 'I am a hacker');
+console.log(output); // --> 2 */
+function getIndexOf(char, str) {
+  for (let i = 0; i < str.length; i++) {
+    if (str[i] === char) {
+      return i
+    }
+  }
+  return -1
+}
+
+/* Write a function called "areValidCredentials".
+
+Given a name and a password, "areValidCredentials", returns true if the name is longer than 3 characters, AND, the password is at least 8 characters long. Otherwise it returns false.
+
+var output = areValidCredentials('Ritu', 'mylongpassword')
+console.log(output); // --> true */
+function areValidCredentials(name, password) {
+  return name.length > 3 && password.length >= 8
+}
+
+/* Write a function called "findMinLengthOfThreeWords".
+
+Given 3 words, "findMinLengthOfThreeWords" returns the length of the shortest word.
+
+var output = findMinLengthOfThreeWords('a', 'be', 'see');
+console.log(output); // --> 1 */
+
+function findMinLengthOfThreeWords(word1, word2, word3) {
+  let arr = [].slice.call(arguments).sort((a, b) => b.length - a.length)
+  //or put the [word1, word2, word3] and put sort method on this
+  return arr[arr.length - 1].length
+}
+
+/* Write a function called "findMaxLengthOfThreeWords".
+
+Given 3 words, "findMaxLengthOfThreeWords" returns the length of the longest word.
+
+var output = findMaxLengthOfThreeWords('a', 'be', 'see');
+console.log(output); // --> 3 */
+function findMaxLengthOfThreeWords(word1, word2, word3) {
+  let arr = [].slice.call(arguments).sort((a, b) => {
+    //or put the [word1, word2, word3] and put sort method on this
+    return b.length - a.length
+  })
+  return arr[0].length
+}
+
+/* Write a function called "getLongestOfThreeWords".
+
+Given 3 words, "getLongestOfThreeWords" returns the longest of three words.
+
+Notes:
+
+If there is a tie, it should return the first word in the tie.
+var output = getLongestOfThreeWords('these', 'three', 'words');
+console.log(output); // --> 'these' */
+
+function getLongestOfThreeWords(word1, word2, word3) {
+  return [].slice.call(arguments).sort((a, b) => b.length - a.length)[0]
+  //or put the [word1, word2, word3] and put sort method on this
+}
+
+/* Write a function called "findShortestOfThreeWords".
+
+Given 3 strings, "findShortestOfThreeWords" returns the shortest of the given strings.
+
+Notes:
+
+If there are ties, it should return the first word in the parameters list.
+var output = findShortestOfThreeWords('a', 'two', 'three');
+console.log(output); // --> 'a' */
+function findShortestOfThreeWords(word1, word2, word3) {
+  return [].slice.call(arguments).sort((a, b) => a.length - b.length)[0]
+}
+
+/*
+Write a function called "select".
+
+Given an array and an object, "select" returns a new object whose properties are those in the given object AND whose keys are present in the given array.
+
+Notes:
+
+If keys are present in the given array, but are not in the given object, it should ignore them.
+It does not modify the passed in object.
+var arr = ['a', 'c', 'e'];
+var obj = {
+  a: 1,
+  b: 2,
+  c: 3,
+  d: 4
+};
+var output = select(arr, obj);
+console.log(output); // --> { a: 1, c: 3 }
+*/
+
+function select(arr, obj) {
+  let newObj = {}
+  for (let value of arr) {
+    if (obj[value]) {
+      newObj[value] = obj[value]
+    }
+  }
+  return newObj
 }
