@@ -19,9 +19,7 @@ var outputOne = getAllLetters('Radagast');
 console.log(outputOne); // --> ['R', 'a', 'd', 'a', 'g', 'a', 's', 't']
 
 function getAllWords(str) {
-  return !str
-    ? []
-    : str.split(' ');
+  return !str ? [] : str.split(' ');
 }
 
 var outputTwo = getAllWords('Radagast the Brown');
@@ -65,11 +63,7 @@ Use ! and && operators instead.
  */
 
 function or(expression1, expression2) {
-  return expression1 === true
-    ? true
-    : expression2 === true
-      ? true
-      : false;
+  return expression1 === true ? true : expression2 === true ? true : false;
 }
 
 var outputFour = or(true, false);
@@ -83,8 +77,8 @@ function isEitherEvenOrAreBoth7(num1, num2) {
   return num1 === 7 && num2 === 7
     ? true
     : num1 % 2 === 0 || num2 % 2 === 0
-      ? true
-      : false;
+    ? true
+    : false;
 }
 
 // A little unreadable, but I just wanted practice with ternary
@@ -103,8 +97,8 @@ function isEitherEvenAndLessThan9(num1, num2) {
   return num1 < 9 && num2 < 9 && num1 % 2 === 0
     ? true
     : num1 < 9 && num2 < 9 && num2 % 2 === 0
-      ? true
-      : false;
+    ? true
+    : false;
 }
 
 var outputSix = isEitherEvenAndLessThan9(2, 4);
@@ -125,11 +119,11 @@ Do not modify the 2nd object at all. */
 
 var obj1 = {
   a: 1,
-  b: 2
+  b: 2,
 };
 var obj2 = {
   b: 4,
-  c: 3
+  c: 3,
 };
 
 function extend(obj1, obj2) {
@@ -286,10 +280,10 @@ console.log(obj); // --> { b: 3 }
 function removeEvenValues(obj) {
   for (let key in obj) {
     if (typeof obj[key] === 'number' && obj[key] % 2 === 0) {
-      delete obj[key]
+      delete obj[key];
     }
   }
-  return obj
+  return obj;
 }
 
 /*
@@ -308,10 +302,10 @@ console.log(obj); // --> { a: 2, c: 4 }
 function removeOddValues(obj) {
   for (let key in obj) {
     if (typeof obj[key] === 'number' && obj[key] % 2) {
-      delete obj[key]
+      delete obj[key];
     }
   }
-  return obj
+  return obj;
 }
 
 /*
@@ -328,7 +322,7 @@ var output = countNumberOfKeys(obj);
 console.log(output); // --> 3
 */
 function countNumberOfKeys(obj) {
-  return Object.keys(obj).length
+  return Object.keys(obj).length;
 }
 
 /* Write a function called "convertDoubleSpaceToSingle".
@@ -342,7 +336,7 @@ Notes:
 In order to do this problem, you should be familiar with "String.split", and "Array.join". */
 
 function convertDoubleSpaceToSingle(str) {
-  return str.split("  ").join(" ")
+  return str.split('  ').join(' ');
 }
 
 /* Write a function called "joinThreeArrays".
@@ -353,7 +347,7 @@ var output = joinThreeArrays([1, 2], [3, 4], [5, 6]);
 console.log(output); // --> [1, 2, 3, 4, 5, 6]
 You should be familiar with the "concat" method for this problem. */
 function joinThreeArrays(arr1, arr2, arr3) {
-  return [].slice.call(arguments).reduce((acc, cur) => acc.concat(cur), [])
+  return [].slice.call(arguments).reduce((acc, cur) => acc.concat(cur), []);
 }
 
 /* Write a function called "addToFrontOfNew".
@@ -367,9 +361,9 @@ var output = addToFrontOfNew(input, 3);
 console.log(output); // --> [3, 1, 2];
 console.log(input); // --> [1, 2] */
 function addToFrontOfNew(arr, element) {
-  let newArr = arr.slice()
-  newArr.unshift(element)
-  return newArr
+  let newArr = arr.slice();
+  newArr.unshift(element);
+  return newArr;
 }
 
 /* Write a function called "addToBackNew".
@@ -383,9 +377,9 @@ var output = addToBackOfNew(input, 3);
 console.log(input); // --> [1, 2]
 console.log(output); // --> [1, 2, 3] */
 function addToBackOfNew(arr, element) {
-  let newArr = arr.slice()
-  newArr.push(element)
-  return newArr
+  let newArr = arr.slice();
+  newArr.push(element);
+  return newArr;
 }
 
 /* Write a function called "getAllElementsButNth".
@@ -395,8 +389,8 @@ Given an array and an index, "getAllElementsButNth" returns an array with all th
 var output = getAllElementsButNth(['a', 'b', 'c'], 1);
 console.log(output); // --> ['a', 'c'] */
 function getAllElementsButNth(array, n) {
-  array.splice(n, 1)
-  return array
+  array.splice(n, 1);
+  return array;
 }
 
 /* Write a function called "getIndexOf".
@@ -414,10 +408,10 @@ console.log(output); // --> 2 */
 function getIndexOf(char, str) {
   for (let i = 0; i < str.length; i++) {
     if (str[i] === char) {
-      return i
+      return i;
     }
   }
-  return -1
+  return -1;
 }
 
 /* Write a function called "areValidCredentials".
@@ -427,7 +421,7 @@ Given a name and a password, "areValidCredentials", returns true if the name is 
 var output = areValidCredentials('Ritu', 'mylongpassword')
 console.log(output); // --> true */
 function areValidCredentials(name, password) {
-  return name.length > 3 && password.length >= 8
+  return name.length > 3 && password.length >= 8;
 }
 
 /* Write a function called "findMinLengthOfThreeWords".
@@ -438,9 +432,9 @@ var output = findMinLengthOfThreeWords('a', 'be', 'see');
 console.log(output); // --> 1 */
 
 function findMinLengthOfThreeWords(word1, word2, word3) {
-  let arr = [].slice.call(arguments).sort((a, b) => b.length - a.length)
+  let arr = [].slice.call(arguments).sort((a, b) => b.length - a.length);
   //or put the [word1, word2, word3] and put sort method on this
-  return arr[arr.length - 1].length
+  return arr[arr.length - 1].length;
 }
 
 /* Write a function called "findMaxLengthOfThreeWords".
@@ -452,9 +446,9 @@ console.log(output); // --> 3 */
 function findMaxLengthOfThreeWords(word1, word2, word3) {
   let arr = [].slice.call(arguments).sort((a, b) => {
     //or put the [word1, word2, word3] and put sort method on this
-    return b.length - a.length
-  })
-  return arr[0].length
+    return b.length - a.length;
+  });
+  return arr[0].length;
 }
 
 /* Write a function called "getLongestOfThreeWords".
@@ -468,7 +462,7 @@ var output = getLongestOfThreeWords('these', 'three', 'words');
 console.log(output); // --> 'these' */
 
 function getLongestOfThreeWords(word1, word2, word3) {
-  return [].slice.call(arguments).sort((a, b) => b.length - a.length)[0]
+  return [].slice.call(arguments).sort((a, b) => b.length - a.length)[0];
   //or put the [word1, word2, word3] and put sort method on this
 }
 
@@ -482,7 +476,7 @@ If there are ties, it should return the first word in the parameters list.
 var output = findShortestOfThreeWords('a', 'two', 'three');
 console.log(output); // --> 'a' */
 function findShortestOfThreeWords(word1, word2, word3) {
-  return [].slice.call(arguments).sort((a, b) => a.length - b.length)[0]
+  return [].slice.call(arguments).sort((a, b) => a.length - b.length)[0];
 }
 
 /*
@@ -506,11 +500,207 @@ console.log(output); // --> { a: 1, c: 3 }
 */
 
 function select(arr, obj) {
-  let newObj = {}
+  let newObj = {};
   for (let value of arr) {
     if (obj[value]) {
-      newObj[value] = obj[value]
+      newObj[value] = obj[value];
     }
   }
-  return newObj
+  return newObj;
+}
+
+/*
+Write a function called "filterOddLengthWords".
+
+Given an array of strings, "filterOddLengthWords" returns an array containing only the elements of the given array whose lengths are odd numbers.
+
+var output = filterOddLengthWords(['there', 'it', 'is', 'now']);
+console.log(output); // --> ['there', "now']
+*/
+function filterOddLengthWords(words) {
+  return words.filter((word) => word.length % 2);
+}
+
+/*
+Write a function called "filterEvenLengthWords".
+
+Given an array of strings, "filterEvenLengthWords" returns an array containing only the elements of the given array whose length is an even number.
+
+var output = filterEvenLengthWords(['word', 'words', 'word', 'words']);
+console.log(output); // --> ['word', 'word']
+*/
+
+function filterEvenLengthWords(words) {
+  return words.filter((word) => word.length % 2 === 0);
+}
+
+/*
+Write a function called "getLengthOfLongestElement".
+
+Given an array, "getLengthOfLongestElement" returns the length of the longest string in the given array.
+
+Notes:
+
+It should return 0 if the array is empty.
+var output = getLengthOfLongestElement(['one', 'two', 'three']);
+console.log(output); // --> 5
+*/
+
+function getLengthOfLongestElement(arr) {
+  if (arr.length > 0) {
+    return arr
+      .filter((word) => {
+        return typeof word === 'string';
+      })
+      .sort((a, b) => b.length - a.length)[0].length;
+  }
+  return 0;
+}
+
+/*
+Write a function called "squareElements". Given an array of numbers, "squareElements" should return a new array where each element is the square of the element of the given array.
+
+var output = squareElements([1, 2, 3]);
+console.log(output); // --> [1, 4, 9]
+*/
+
+function squareElements(arr) {
+  //   return arr.map(elem => elem ** 2 )
+  let newArr = [];
+  for (let num of arr) {
+    newArr.push(num ** 2);
+  }
+  return newArr;
+}
+
+/*
+Write a function called "filterOddElements".
+
+Given an array of numbers, "filterOddElements" returns an array containing only the odd numbers of the given array.
+
+var output = filterOddElements([1, 2, 3, 4, 5]);
+console.log(output); // --> [1, 3, 5]
+*/
+
+function filterOddElements(arr) {
+  return arr.filter((elem) => elem % 2);
+}
+
+/*
+Given an array of numbers, "computeProductOfAllElements" returns the products of all the elements in the given array.
+
+Notes:
+
+If given array is empty, it should return 0.
+var output = computeProductOfAllElements([2, 5, 6]);
+console.log(output); // --> 60
+*/
+
+function computeProductOfAllElements(arr) {
+  if (arr.length < 1) {
+    return 0;
+  }
+  return arr.reduce((acc, curr) => acc * curr);
+}
+
+/*
+Write a function called "filterEvenElements".
+
+Given an array of numbers, "filterEvenElements" returns an array containing only the even numbers of the given array.
+
+var output = filterEvenElements([2, 3, 4, 5, 6]);
+console.log(output); // --> [2, 4, 6]
+*/
+function filterEvenElements(arr) {
+  return arr.filter((num) => num % 2 === 0);
+}
+
+/*
+Write a function called "getLengthOfShortestElement".
+
+Given an array, "getLengthOfShortestElement" returns the length of the shortest string in the given array.
+
+Notes:
+
+It should return 0 if the array is empty.
+var output = getLengthOfShortestElement(['one', 'two', 'three']);
+console.log(output); // --> 3
+*/
+function getLengthOfShortestElement(arr) {
+  if (arr.length < 1) {
+    return 0;
+  } else {
+    let newArr = JSON.parse(JSON.stringify(arr));
+    return newArr.sort((a, b) => a.length - b.length)[0].length;
+  }
+}
+
+/*
+Write a function called "getLongestElement".
+
+Given an array, "getLongestElement" returns the longest string in the given array.
+
+Notes:
+
+If there are ties, it returns the first element to appear.
+If the array is empty, it should return an empty string.
+var output = getLongestElement(['one', 'two', 'three']);
+console.log(output); // --> 'three'
+*/
+function getLongestElement(arr) {
+  if (arr.length < 1) {
+    return '';
+  } else {
+    let newArr = JSON.parse(JSON.stringify(arr));
+    return newArr.sort((a, b) => b.length - a.length)[0];
+  }
+}
+
+/*
+Write a function called "findSmallestElement".
+
+Given an array of numbers, "findSmallestElement" returns the smallest number within the given array.
+
+Notes:
+
+If the given array is empty, it should return 0.
+var output = findSmallestElement([4, 1, 9, 10]);
+console.log(output); // --> 1
+*/
+
+function findSmallestElement(arr) {
+  if (arr.length < 1) {
+    return 0;
+  }
+  let smallest = arr[0];
+  for (let i = 1; i < arr.length; i++) {
+    if (arr[i] < smallest) {
+      smallest = arr[i];
+    }
+  }
+  return smallest;
+}
+
+/*Write a function called "findShortestElement".
+
+Given an array, "findShortestElement" returns the shortest string within the given array.
+
+Notes:
+
+If there are ties, it should return the first element to appear.
+If the given array is empty, it should return an empty string.
+var output = findShortestElement(['a', 'two', 'three']);
+console.log(output); // --> 'a'*/
+
+function findShortestElement(arr) {
+  if (arr.length < 1) {
+    return '';
+  }
+  let smallest = arr[0];
+  for (let i = 1; i < arr.length; i++) {
+    if (arr[i].length < smallest.length) {
+      smallest = arr[i];
+    }
+  }
+  return smallest;
 }
