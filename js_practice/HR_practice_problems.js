@@ -19,7 +19,9 @@ var outputOne = getAllLetters('Radagast');
 console.log(outputOne); // --> ['R', 'a', 'd', 'a', 'g', 'a', 's', 't']
 
 function getAllWords(str) {
-  return !str ? [] : str.split(' ');
+  return !str
+    ? []
+    : str.split(' ');
 }
 
 var outputTwo = getAllWords('Radagast the Brown');
@@ -63,7 +65,11 @@ Use ! and && operators instead.
  */
 
 function or(expression1, expression2) {
-  return expression1 === true ? true : expression2 === true ? true : false;
+  return expression1 === true
+    ? true
+    : expression2 === true
+      ? true
+      : false;
 }
 
 var outputFour = or(true, false);
@@ -77,8 +83,8 @@ function isEitherEvenOrAreBoth7(num1, num2) {
   return num1 === 7 && num2 === 7
     ? true
     : num1 % 2 === 0 || num2 % 2 === 0
-    ? true
-    : false;
+      ? true
+      : false;
 }
 
 // A little unreadable, but I just wanted practice with ternary
@@ -97,8 +103,8 @@ function isEitherEvenAndLessThan9(num1, num2) {
   return num1 < 9 && num2 < 9 && num1 % 2 === 0
     ? true
     : num1 < 9 && num2 < 9 && num2 % 2 === 0
-    ? true
-    : false;
+      ? true
+      : false;
 }
 
 var outputSix = isEitherEvenAndLessThan9(2, 4);
@@ -119,11 +125,11 @@ Do not modify the 2nd object at all. */
 
 var obj1 = {
   a: 1,
-  b: 2,
+  b: 2
 };
 var obj2 = {
   b: 4,
-  c: 3,
+  c: 3
 };
 
 function extend(obj1, obj2) {
@@ -509,33 +515,28 @@ function select(arr, obj) {
   return newObj;
 }
 
-/*
-Write a function called "filterOddLengthWords".
+/* Write a function called "filterOddLengthWords".
 
 Given an array of strings, "filterOddLengthWords" returns an array containing only the elements of the given array whose lengths are odd numbers.
 
 var output = filterOddLengthWords(['there', 'it', 'is', 'now']);
-console.log(output); // --> ['there', "now']
-*/
+console.log(output); // --> ['there', "now'] */
 function filterOddLengthWords(words) {
   return words.filter((word) => word.length % 2);
 }
 
-/*
-Write a function called "filterEvenLengthWords".
+/* Write a function called "filterEvenLengthWords".
 
 Given an array of strings, "filterEvenLengthWords" returns an array containing only the elements of the given array whose length is an even number.
 
 var output = filterEvenLengthWords(['word', 'words', 'word', 'words']);
-console.log(output); // --> ['word', 'word']
-*/
+console.log(output); // --> ['word', 'word'] */
 
 function filterEvenLengthWords(words) {
   return words.filter((word) => word.length % 2 === 0);
 }
 
-/*
-Write a function called "getLengthOfLongestElement".
+/* Write a function called "getLengthOfLongestElement".
 
 Given an array, "getLengthOfLongestElement" returns the length of the longest string in the given array.
 
@@ -543,26 +544,21 @@ Notes:
 
 It should return 0 if the array is empty.
 var output = getLengthOfLongestElement(['one', 'two', 'three']);
-console.log(output); // --> 5
-*/
+console.log(output); // --> 5 */
 
 function getLengthOfLongestElement(arr) {
   if (arr.length > 0) {
-    return arr
-      .filter((word) => {
-        return typeof word === 'string';
-      })
-      .sort((a, b) => b.length - a.length)[0].length;
+    return arr.filter((word) => {
+      return typeof word === 'string';
+    }).sort((a, b) => b.length - a.length)[0].length;
   }
   return 0;
 }
 
-/*
-Write a function called "squareElements". Given an array of numbers, "squareElements" should return a new array where each element is the square of the element of the given array.
+/* Write a function called "squareElements". Given an array of numbers, "squareElements" should return a new array where each element is the square of the element of the given array.
 
 var output = squareElements([1, 2, 3]);
-console.log(output); // --> [1, 4, 9]
-*/
+console.log(output); // --> [1, 4, 9] */
 
 function squareElements(arr) {
   //   return arr.map(elem => elem ** 2 )
@@ -573,28 +569,24 @@ function squareElements(arr) {
   return newArr;
 }
 
-/*
-Write a function called "filterOddElements".
+/* Write a function called "filterOddElements".
 
 Given an array of numbers, "filterOddElements" returns an array containing only the odd numbers of the given array.
 
 var output = filterOddElements([1, 2, 3, 4, 5]);
-console.log(output); // --> [1, 3, 5]
-*/
+console.log(output); // --> [1, 3, 5] */
 
 function filterOddElements(arr) {
   return arr.filter((elem) => elem % 2);
 }
 
-/*
-Given an array of numbers, "computeProductOfAllElements" returns the products of all the elements in the given array.
+/* Given an array of numbers, "computeProductOfAllElements" returns the products of all the elements in the given array.
 
 Notes:
 
 If given array is empty, it should return 0.
 var output = computeProductOfAllElements([2, 5, 6]);
-console.log(output); // --> 60
-*/
+console.log(output); // --> 60 */
 
 function computeProductOfAllElements(arr) {
   if (arr.length < 1) {
@@ -603,20 +595,17 @@ function computeProductOfAllElements(arr) {
   return arr.reduce((acc, curr) => acc * curr);
 }
 
-/*
-Write a function called "filterEvenElements".
+/* Write a function called "filterEvenElements".
 
 Given an array of numbers, "filterEvenElements" returns an array containing only the even numbers of the given array.
 
 var output = filterEvenElements([2, 3, 4, 5, 6]);
-console.log(output); // --> [2, 4, 6]
-*/
+console.log(output); // --> [2, 4, 6] */
 function filterEvenElements(arr) {
   return arr.filter((num) => num % 2 === 0);
 }
 
-/*
-Write a function called "getLengthOfShortestElement".
+/* Write a function called "getLengthOfShortestElement".
 
 Given an array, "getLengthOfShortestElement" returns the length of the shortest string in the given array.
 
@@ -624,8 +613,7 @@ Notes:
 
 It should return 0 if the array is empty.
 var output = getLengthOfShortestElement(['one', 'two', 'three']);
-console.log(output); // --> 3
-*/
+console.log(output); // --> 3 */
 function getLengthOfShortestElement(arr) {
   if (arr.length < 1) {
     return 0;
@@ -635,8 +623,7 @@ function getLengthOfShortestElement(arr) {
   }
 }
 
-/*
-Write a function called "getLongestElement".
+/* Write a function called "getLongestElement".
 
 Given an array, "getLongestElement" returns the longest string in the given array.
 
@@ -645,8 +632,7 @@ Notes:
 If there are ties, it returns the first element to appear.
 If the array is empty, it should return an empty string.
 var output = getLongestElement(['one', 'two', 'three']);
-console.log(output); // --> 'three'
-*/
+console.log(output); // --> 'three' */
 function getLongestElement(arr) {
   if (arr.length < 1) {
     return '';
@@ -656,8 +642,7 @@ function getLongestElement(arr) {
   }
 }
 
-/*
-Write a function called "findSmallestElement".
+/* Write a function called "findSmallestElement".
 
 Given an array of numbers, "findSmallestElement" returns the smallest number within the given array.
 
@@ -665,8 +650,7 @@ Notes:
 
 If the given array is empty, it should return 0.
 var output = findSmallestElement([4, 1, 9, 10]);
-console.log(output); // --> 1
-*/
+console.log(output); // --> 1 */
 
 function findSmallestElement(arr) {
   if (arr.length < 1) {
@@ -681,7 +665,7 @@ function findSmallestElement(arr) {
   return smallest;
 }
 
-/*Write a function called "findShortestElement".
+/* Write a function called "findShortestElement".
 
 Given an array, "findShortestElement" returns the shortest string within the given array.
 
@@ -690,7 +674,7 @@ Notes:
 If there are ties, it should return the first element to appear.
 If the given array is empty, it should return an empty string.
 var output = findShortestElement(['a', 'two', 'three']);
-console.log(output); // --> 'a'*/
+console.log(output); // --> 'a' */
 
 function findShortestElement(arr) {
   if (arr.length < 1) {
@@ -705,31 +689,26 @@ function findShortestElement(arr) {
   return smallest;
 }
 
-/*
-Write a function called "getLargestElement".
+/* Write a function called "getLargestElement".
 
 Given an array, "getLargestElement" returns the largest number in the given array.
 
 var output = getLargestElement([5, 2, 8, 3]);
-console.log(output); // --> 8;
-*/
+console.log(output); // --> 8; */
 function getLargestElement(arr) {
-   return arr.sort((a,b) => b - a)[0]
+  return arr.sort((a, b) => b - a)[0]
 }
 
-/*
-Write a function called "computeSumOfAllElements".
+/* Write a function called "computeSumOfAllElements".
 
 Given an array of numbers, "computeSumOfAllElements" returns the sum of all the elements in the given array.
 
 var output = computeSumOfAllElements([1, 2, 3])
-console.log(output); // --> 6
-*/
+console.log(output); // --> 6 */
 
 function computeSumOfAllElements(arr) {
-  return arr.reduce((acc,curr) => acc + curr , 0)
+  return arr.reduce((acc, curr) => acc + curr, 0)
 }
-
 
 /*
 Write a function called "getElementsThatEqual10AtProperty".
@@ -749,12 +728,12 @@ var output = getElementsThatEqual10AtProperty(obj, 'key');
 console.log(output); // --> [10, 10]
 */
 function getElementsThatEqual10AtProperty(obj, key) {
-   if(obj.hasOwnProperty(key)){
-		if(Array.isArray(obj[key])){
-			return obj[key].filter(num => num === 10)
-		}
-	}
-	return []
+  if (obj.hasOwnProperty(key)) {
+    if (Array.isArray(obj[key])) {
+      return obj[key].filter(num => num === 10)
+    }
+  }
+  return []
 }
 
 /*
@@ -775,10 +754,138 @@ var output = getElementsLessThan100AtProperty(obj, 'key');
 console.log(output); // --> [20, 50]
 */
 function getElementsLessThan100AtProperty(obj, key) {
-  	if(obj.hasOwnProperty(key)){
-		if(Array.isArray(obj[key])){
-			return obj[key].filter(num => num < 100)
+  if (obj.hasOwnProperty(key)) {
+    if (Array.isArray(obj[key])) {
+      return obj[key].filter(num => num < 100)
+    }
+  }
+  return []
+}
+
+/* Write a function called "countAllCharacters".
+
+Given a string, "countAllCharacters" returns an object where each key is a character in the given string. The value of each key should be how many times each character appeared in the given string.
+
+Notes:
+
+If given an empty string, countAllCharacters should return an empty object.
+var output = countAllCharacters('banana');
+console.log(output); // --> {b: 1, a: 3, n: 2} */
+
+function countAllCharacters(str) {
+  let newObj = {}
+
+  for (let letter of str) {
+    if (newObj[letter]) {
+      newObj[letter]++
+    } else {
+      newObj[letter] = 1
+    }
+
+  }
+  return newObj
+}
+
+/*
+Write a function called "getElementsGreaterThan10AtProperty".
+
+Given an object and a key, "getElementsGreaterThan10AtProperty" returns an array containing the elements within the array, located at the given key, that are greater than 10.
+
+Notes:
+
+If the array is empty, it should return an empty array.
+If the array contains no elements greater than 10, it should return an empty array.
+If the property at the given key is not an array, it should return an empty array.
+If there is no property at the key, it should return an empty array.
+var obj = {
+  key: [1, 20, 30]
+};
+var output = getElementsGreaterThan10AtProperty(obj, 'key');
+console.log(output); // --> [20, 30]
+*/
+function getElementsGreaterThan10AtProperty(obj, key) {
+   if (obj.hasOwnProperty(key)) {
+    if (Array.isArray(obj[key])) {
+      return obj[key].filter(num => num > 10)
+    }
+  }
+  return []
+}
+
+/*
+Write a function called "getFirstElementOfProperty".
+
+Given an object and a key, "getFirstElementOfProperty" returns the first element of the array located at the given key.
+
+Notes:
+
+If the array is empty, it should return undefined.
+If the property at the given key is not an array, it should return undefined.
+If there is no property at the key, it should return undefined.
+var obj = {
+  key: [1, 2, 4]
+};
+var output = getFirstElementOfProperty(obj, 'key');
+console.log(output); // --> 1
+*/
+
+function getFirstElementOfProperty(obj, key) {
+  if (obj.hasOwnProperty(key)) {
+    if (Array.isArray(obj[key])) {
+			return obj[key][0]
 		}
 	}
-	return []
 }
+
+/*
+Write a function called "getNthElementOfProperty".
+
+Given an object and a key, "getNthElementOfProperty" returns the nth element of an array located at the given key.
+
+Notes:
+
+If the array is empty, it should return undefined.
+If n is out of range, it should return undefined.
+If the property at the given key is not an array, it should return undefined.
+If there is no property at the key, it should return undefined.
+var obj = {
+  key: [1, 2, 6]
+};
+var output = getNthElementOfProperty(obj, 'key', 1);
+console.log(output); // --> 2
+*/
+
+function getNthElementOfProperty(obj, key, n) {
+  if (obj.hasOwnProperty(key)) {
+    if (Array.isArray(obj[key])) {
+			return obj[key][n]
+		}
+	}
+	return undefined
+}
+
+ /*
+ Write a function called "getLastElementOfProperty".
+
+Given an object and a key, "getLastElementOfProperty" returns the last element of an array located at the given key.
+
+Notes:
+
+If the array is empty, it should return undefined.
+if the property at the given key is not an array, it should return undefined.
+If there is no property at the key, it should return undefined.
+var obj = {
+  key: [1, 2, 5]
+};
+var output = getLastElementOfProperty(obj, 'key');
+console.log(output); // --> 5
+ */
+ function getLastElementOfProperty(obj, key) {
+   if (obj.hasOwnProperty(key)) {
+     if (Array.isArray(obj[key])) {
+ 			const arr = obj[key]
+ 			return arr[arr.length - 1]
+ 		}
+ 	}
+ 	return undefined
+ }
