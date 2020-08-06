@@ -19,9 +19,7 @@ var outputOne = getAllLetters('Radagast');
 console.log(outputOne); // --> ['R', 'a', 'd', 'a', 'g', 'a', 's', 't']
 
 function getAllWords(str) {
-  return !str
-    ? []
-    : str.split(' ');
+  return !str ? [] : str.split(' ');
 }
 
 var outputTwo = getAllWords('Radagast the Brown');
@@ -65,11 +63,7 @@ Use ! and && operators instead.
  */
 
 function or(expression1, expression2) {
-  return expression1 === true
-    ? true
-    : expression2 === true
-      ? true
-      : false;
+  return expression1 === true ? true : expression2 === true ? true : false;
 }
 
 var outputFour = or(true, false);
@@ -83,8 +77,8 @@ function isEitherEvenOrAreBoth7(num1, num2) {
   return num1 === 7 && num2 === 7
     ? true
     : num1 % 2 === 0 || num2 % 2 === 0
-      ? true
-      : false;
+    ? true
+    : false;
 }
 
 // A little unreadable, but I just wanted practice with ternary
@@ -103,8 +97,8 @@ function isEitherEvenAndLessThan9(num1, num2) {
   return num1 < 9 && num2 < 9 && num1 % 2 === 0
     ? true
     : num1 < 9 && num2 < 9 && num2 % 2 === 0
-      ? true
-      : false;
+    ? true
+    : false;
 }
 
 var outputSix = isEitherEvenAndLessThan9(2, 4);
@@ -125,11 +119,11 @@ Do not modify the 2nd object at all. */
 
 var obj1 = {
   a: 1,
-  b: 2
+  b: 2,
 };
 var obj2 = {
   b: 4,
-  c: 3
+  c: 3,
 };
 
 function extend(obj1, obj2) {
@@ -548,9 +542,11 @@ console.log(output); // --> 5 */
 
 function getLengthOfLongestElement(arr) {
   if (arr.length > 0) {
-    return arr.filter((word) => {
-      return typeof word === 'string';
-    }).sort((a, b) => b.length - a.length)[0].length;
+    return arr
+      .filter((word) => {
+        return typeof word === 'string';
+      })
+      .sort((a, b) => b.length - a.length)[0].length;
   }
   return 0;
 }
@@ -696,7 +692,7 @@ Given an array, "getLargestElement" returns the largest number in the given arra
 var output = getLargestElement([5, 2, 8, 3]);
 console.log(output); // --> 8; */
 function getLargestElement(arr) {
-  return arr.sort((a, b) => b - a)[0]
+  return arr.sort((a, b) => b - a)[0];
 }
 
 /* Write a function called "computeSumOfAllElements".
@@ -707,7 +703,7 @@ var output = computeSumOfAllElements([1, 2, 3])
 console.log(output); // --> 6 */
 
 function computeSumOfAllElements(arr) {
-  return arr.reduce((acc, curr) => acc + curr, 0)
+  return arr.reduce((acc, curr) => acc + curr, 0);
 }
 
 /*
@@ -730,10 +726,10 @@ console.log(output); // --> [10, 10]
 function getElementsThatEqual10AtProperty(obj, key) {
   if (obj.hasOwnProperty(key)) {
     if (Array.isArray(obj[key])) {
-      return obj[key].filter(num => num === 10)
+      return obj[key].filter((num) => num === 10);
     }
   }
-  return []
+  return [];
 }
 
 /*
@@ -756,10 +752,10 @@ console.log(output); // --> [20, 50]
 function getElementsLessThan100AtProperty(obj, key) {
   if (obj.hasOwnProperty(key)) {
     if (Array.isArray(obj[key])) {
-      return obj[key].filter(num => num < 100)
+      return obj[key].filter((num) => num < 100);
     }
   }
-  return []
+  return [];
 }
 
 /* Write a function called "countAllCharacters".
@@ -773,17 +769,16 @@ var output = countAllCharacters('banana');
 console.log(output); // --> {b: 1, a: 3, n: 2} */
 
 function countAllCharacters(str) {
-  let newObj = {}
+  let newObj = {};
 
   for (let letter of str) {
     if (newObj[letter]) {
-      newObj[letter]++
+      newObj[letter]++;
     } else {
-      newObj[letter] = 1
+      newObj[letter] = 1;
     }
-
   }
-  return newObj
+  return newObj;
 }
 
 /*
@@ -804,12 +799,12 @@ var output = getElementsGreaterThan10AtProperty(obj, 'key');
 console.log(output); // --> [20, 30]
 */
 function getElementsGreaterThan10AtProperty(obj, key) {
-   if (obj.hasOwnProperty(key)) {
+  if (obj.hasOwnProperty(key)) {
     if (Array.isArray(obj[key])) {
-      return obj[key].filter(num => num > 10)
+      return obj[key].filter((num) => num > 10);
     }
   }
-  return []
+  return [];
 }
 
 /*
@@ -832,9 +827,9 @@ console.log(output); // --> 1
 function getFirstElementOfProperty(obj, key) {
   if (obj.hasOwnProperty(key)) {
     if (Array.isArray(obj[key])) {
-			return obj[key][0]
-		}
-	}
+      return obj[key][0];
+    }
+  }
 }
 
 /*
@@ -858,13 +853,13 @@ console.log(output); // --> 2
 function getNthElementOfProperty(obj, key, n) {
   if (obj.hasOwnProperty(key)) {
     if (Array.isArray(obj[key])) {
-			return obj[key][n]
-		}
-	}
-	return undefined
+      return obj[key][n];
+    }
+  }
+  return undefined;
 }
 
- /*
+/*
  Write a function called "getLastElementOfProperty".
 
 Given an object and a key, "getLastElementOfProperty" returns the last element of an array located at the given key.
@@ -880,17 +875,17 @@ var obj = {
 var output = getLastElementOfProperty(obj, 'key');
 console.log(output); // --> 5
  */
- function getLastElementOfProperty(obj, key) {
-   if (obj.hasOwnProperty(key)) {
-     if (Array.isArray(obj[key])) {
- 			const arr = obj[key]
- 			return arr[arr.length - 1]
- 		}
- 	}
- 	return undefined
- }
+function getLastElementOfProperty(obj, key) {
+  if (obj.hasOwnProperty(key)) {
+    if (Array.isArray(obj[key])) {
+      const arr = obj[key];
+      return arr[arr.length - 1];
+    }
+  }
+  return undefined;
+}
 
- /*
+/*
  Write a function called "removeElement".
 
 Given an array of elements, and a "discarder" parameter, "removeElement" returns an array containing the items in the given array that do not match the "discarder" parameter.
@@ -903,8 +898,8 @@ var output = removeElement([1, 2, 3, 2, 1], 2);
 console.log(output); // --> [1, 3, 1]
  */
 
- function removeElement(array, discarder) {
-  return array.filter(elem => elem !== discarder)
+function removeElement(array, discarder) {
+  return array.filter((elem) => elem !== discarder);
 }
 
 /*
@@ -919,7 +914,7 @@ var output = keep([1, 2, 3, 2, 1], 2)
 console.log(output); --> [2, 2]
 */
 function keep(array, keeper) {
-  return array.filter(elem => elem === keeper)
+  return array.filter((elem) => elem === keeper);
 }
 
 /*Write a function called "computeAverageOfNumbers".
@@ -934,8 +929,174 @@ var output = computeAverageOfNumbers(input);
 console.log(output); // --> 3 */
 
 function computeAverageOfNumbers(nums) {
-  if(nums.length < 1){
-      return 0
+  if (nums.length < 1) {
+    return 0;
   }
-  return nums.reduce((acc, curr) => acc + curr, 0) / nums.length
+  return nums.reduce((acc, curr) => acc + curr, 0) / nums.length;
+}
+
+/*
+Write a function called "getOddLengthWordsAtProperty".
+
+Given an object and a key, "getOddLengthWordsAtProperty" returns an array containing all the odd length word elements of the array located at the given key.
+
+Notes:
+
+If the array is empty, it should return an empty array.
+If it contains no odd length elements, it should return an empty array.
+If the property at the given key is not an array, it should return an empty array.
+If there is no property at the given key, it should return an empty array.
+var obj = {
+  key: ['It', 'has', 'some', 'words']
+};
+var output = getOddLengthWordsAtProperty(obj, 'key');
+console.log(output); // --> ['has', 'words']
+*/
+
+function getOddLengthWordsAtProperty(obj, key) {
+  if (obj.hasOwnProperty(key)) {
+    if (Array.isArray(obj[key])) {
+      return obj[key].filter((word) => word.length % 2);
+    }
+  }
+  return [];
+}
+
+/*
+getAverageOfElementsAtProperty
+Submitted on Today at 2:05 AM
+Write a function called "getAverageOfElementsAtProperty".
+
+Given an object and a key, "getAverageOfElementsAtProperty" returns the average of all the elements in the array located at the given key.
+
+Notes:
+
+If the array at the given key is empty, it should return 0.
+If the property at the given key is not an array, it should return 0.
+If there is no property at the given key, it should return 0.
+var obj = {
+  key: [1, 2, 3]
+};
+var output = getAverageOfElementsAtProperty(obj, 'key');
+console.log(output); // --> 2
+*/
+
+function getAverageOfElementsAtProperty(obj, key) {
+  if (obj.hasOwnProperty(key) && Array.isArray(obj[key])) {
+    if (obj[key].length > 1) {
+      return obj[key].reduce((a, b) => a + b, 0) / obj[key].length;
+    }
+  }
+  return 0;
+}
+
+/*
+getEvenLengthWordsAtProperty
+Submitted on Today at 2:06 AM
+Write a function called "getEvenLengthWordsAtProperty".
+
+Given an object and a key, "getEvenLengthWordsAtProperty" returns an array containing all the even length word elements of the array located at the given key.
+
+Notes:
+
+If the array is empty, it should return an empty array.
+If it contains no even length elements, it should return an empty array.
+If the property at the given key is not an array, it should return an empty array.
+If there is no property at the key, it should return an empty array.
+var obj = {
+  key: ['a', 'long', 'game']
+};
+var output = getEvenLengthWordsAtProperty(obj, 'key');
+console.log(output); // --> ['long', 'game']
+*/
+
+function getEvenLengthWordsAtProperty(obj, key) {
+  if (obj.hasOwnProperty(key)) {
+    if (Array.isArray(obj[key])) {
+      return obj[key].filter((word) => word.length % 2 === 0);
+    }
+  }
+  return [];
+}
+
+/*
+Write a function called "getSquaredElementsAtProperty".
+
+Given an object and a key, "getSquaredElementsAtProperty" returns an array containing all the squared elements of the array located at the given key.
+
+Notes:
+
+If the array is empty, it should return an empty array.
+If the property at the given key is not an array, it should return an empty array.
+If there is no property at the key, it should return an empty array.
+var obj = {
+  key: [2, 1, 5]
+};
+var output = getSquaredElementsAtProperty(obj, 'key');
+console.log(output); // --> [4, 1, 25]
+*/
+
+function getSquaredElementsAtProperty(obj, key) {
+  const arr = obj[key];
+  if (obj.hasOwnProperty(key) && Array.isArray(arr)) {
+    if (arr.length > 1) {
+      return arr.map((word) => word ** 2);
+    }
+  }
+  return [];
+}
+
+/*
+Write a function called "getOddElementsAtProperty".
+
+Given an object and a key, "getOddElementsAtProperty" returns an array containing all the odd elements of the array located at the given key.
+
+Notes:
+
+If the array is empty, it should return an empty array.
+If it contains no odd elements, it should return an empty array.
+If the property at the given key is not an array, it should return an empty array.
+If there is no property at the key, it should return an empty array.
+var obj = {
+  key: [1, 2, 3, 4, 5]
+};
+var output = getOddElementsAtProperty(obj, 'key');
+console.log(output); // --> [1, 3, 5] 
+*/
+function getOddElementsAtProperty(obj, key) {
+  const arr = obj[key];
+  if (obj.hasOwnProperty(key) && Array.isArray(arr)) {
+    if (arr.length > 1) {
+      return arr.filter((num) => num % 2);
+    }
+  }
+  return [];
+}
+
+/*
+Write a function called "getEvenElementsAtProperty".
+
+Given an object and a key, "getEvenElementsAtProperty" returns an array containing all the even elements of the array located at the given key.
+
+Notes:
+
+If the array is empty, it should return an empty array.
+If the array contains no even elements, it should return an empty array.
+If the property at the given key is not an array, it should return an empty array.
+If there is no property at the given key, it should return an empty array.
+var obj = {
+  key: [1000, 11, 50, 17]
+};
+var output = getEvenElementsAtProperty(obj, 'key');
+console.log(output); // --> [1000, 50]
+*/
+
+function getEvenElementsAtProperty(obj, key) {
+  const arr = obj[key];
+  if (obj.hasOwnProperty(key) && Array.isArray(arr)) {
+    if (arr.length > 1) {
+      return arr.filter((num) => num % 2 === 0);
+    }
+  }
+  return [];
 }
