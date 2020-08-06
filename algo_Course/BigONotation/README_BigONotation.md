@@ -8,7 +8,7 @@ Big-O notation measures the worst case complexity of an algorithm. Where _n_ rep
 
 **What will happen as _n_ approaches infinity?**
 
-In ELI5 terms, when dealing with a problem or a task such as **'write a function that accepts string input and returns a reversed copy'** there are multiple ways to go about solving this problem, but Big-O notation lets us pick the solution that is best. In other words, its a way that compares code and its performance/effiency. Does **a** solution to the problem run faster than writing the **b** solution?
+In ELI5 terms, when dealing with a problem or a task such as **'write a function that accepts string input and returns a reversed copy'** there are multiple ways to go about solving this problem, but Big-O notation lets us pick the solution that is best. In other words, its a way that compares code and its performance/efficient. Does **a** solution to the problem run faster than writing the **b** solution?
 
 With Big-O notation we get numeric representation of how efficient our code is.
 
@@ -110,7 +110,7 @@ Like the above, an example such as `O((n+100)∗(n+20)) is O(n^2)`
 
 ## Big O Shortcuts
 
-1. Arthmetic operations are constant
+1. Arithmetic operations are constant
 2. Assignment is constant
 3. Accessing data via index or key is constant
 4. In a loop, the complexity is the length of the loop times the complexity of what happens inside of the loop.
