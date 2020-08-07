@@ -1208,3 +1208,259 @@ function getElementOfArrayProperty(obj, key, index) {
   }
   return undefined;
 }
+
+/*
+Write a function called "calculateBillTotal".
+
+Given the pre tax and pre tip amount of a meal, "calculateBillTotal" returns the total amount due after tax and tip.
+
+Notes:
+
+Assume that sales tax is 9.5% and tip is 15%.
+Do NOT tip on the sales tax, only on the pre tip amount.
+var output = calculateBillTotal(20);
+console.log(output); // --> 24.9
+*/
+function calculateBillTotal(preTaxAndTipAmount) {
+  const salesTax = preTaxAndTipAmount * (9.5 / 100);
+  const afterTip = preTaxAndTipAmount * (15 / 100) + preTaxAndTipAmount;
+  return afterTip + salesTax;
+}
+
+/*
+Write a function called "getStringLength".
+
+Given a string, "getStringLength" returns the length of the given string.
+
+Notes:
+
+Do NOT use any native 'length' methods.
+You might consider using 'substring' or 'slice' as alternatives.
+var output = getStringLength('hello');
+console.log(output); // --> 5
+*/
+function getStringLength(string) {
+  let counter = 0;
+  if (string !== '') {
+    for (let letter of string) {
+      counter++;
+    }
+  }
+  return counter;
+}
+
+/*
+Write a function called "joinArrayOfArrays".
+
+Given an array of arrays, "joinArrayOfArrays" returns a single array containing the elements of the nested arrays.
+
+var output = joinArrayOfArrays([[1, 4], [true, false], ['x', 'y']]);
+console.log(output); // --> [1, 4, true, false, 'x', 'y']
+You should be familiar with the "concat" method for this problem.
+*/
+function joinArrayOfArrays(arr) {
+  return arr.reduce((acc, cur) => acc.concat(cur));
+}
+
+/*
+Write a function called "getProductOfAllElementsAtProperty".
+
+Given an object and a key, "getProductOfAllElementsAtProperty" returns the product of all the elements in the array located at the given key.
+
+Notes:
+
+If the array is empty, it should return 0.
+If the property at the given key is not an array, it should return 0.
+If there is no property at the given key, it should return 0.
+var obj = {
+  key: [1, 2, 3, 4]
+};
+var output = getProductOfAllElementsAtProperty(obj, 'key');
+console.log(output); // --> 24
+*/
+function getProductOfAllElementsAtProperty(obj, key) {
+  if (obj.hasOwnProperty(key) && Array.isArray(obj[key])) {
+    if (obj[key].length > 1) {
+      return obj[key].slice().reduce((acc, cur) => acc * cur, 1);
+    }
+  }
+  return 0;
+}
+
+/*
+Write a function called "sumDigits".
+
+Given a number, "sumDigits" returns the sum of all its digits.
+
+var output = sumDigits(1148);
+console.log(output); // --> 14
+If the number is negative, the first digit should count as negative.
+
+var output = sumDigits(-316);
+console.log(output); // --> 4
+Notes:
+
+In order to use some of the methods that will be most helpful to you, you will most likely want to do some string to number conversion and vice versa.
+Be sure to familiarize yourself with the "toString" method, as well as the "Number" function.
+*/
+function sumDigits(num) {
+  let stringified = num.toString().split('');
+  if (stringified[0] === '-') {
+    stringified[1] = stringified[0] + stringified[1];
+    stringified.splice(0, 1);
+  }
+  return stringified.reduce((acc, cur) => {
+    return Number(acc) + Number(cur);
+  }, 0);
+}
+/*
+Write a function called "getSumOfAllElementsAtProperty".
+
+Given an object and a key, "getSumOfAllElementsAtProperty" returns the sum of all the elements in the array located at the given key.
+
+Notes:
+
+If the array is empty, it should return 0.
+If the property at the given key is not an array, it should return 0.
+If there is no property at the key, it should return 0.
+var obj = {
+  key: [4, 1, 8]
+};
+var output = getSumOfAllElementsAtProperty(obj, 'key');
+console.log(output); // --> 13
+*/
+function getSumOfAllElementsAtProperty(obj, key) {
+  if (obj.hasOwnProperty(key) && Array.isArray(obj[key])) {
+    if (obj[key].length > 1) {
+      return obj[key].reduce((a, c) => a + c, 0);
+    }
+  }
+  return 0;
+}
+
+/*
+Write a function called "findShortestWordAmongMixedElements".
+
+Given an array, "findShortestWordAmongMixedElements" returns the shortest string within the given array.
+
+Notes:
+
+If there are ties, it should return the first element to appear in the given array.
+Expect the given array to have values other than strings.
+If the given array is empty, it should return an empty string.
+If the given array contains no strings, it should return an empty string.
+var output = findShortestWordAmongMixedElements([4, 'two', 2, 'three']);
+console.log(output); // --> 'two'
+*/
+
+function findShortestWordAmongMixedElements(arr) {
+  let newArr = [];
+  for (let elem of arr) {
+    if (typeof elem === 'string') {
+      newArr.push(elem);
+    }
+  }
+
+  if (newArr.length > 0) {
+    return newArr.sort((a, b) => a.length - b.length)[0];
+  }
+  return '';
+}
+
+/*
+Write a function called "findSmallestNumberAmongMixedElements".
+
+Given an array of mixed elements, "findSmallestNumberAmongMixedElements" returns the smallest number within the given array.
+
+Notes:
+
+If the given array is empty, it should return 0.
+If the array contains no numbers, it should return 0.
+var output = findSmallestNumberAmongMixedElements([4, 'lincoln', 9, 'octopus']);
+console.log(output); // --> 4
+*/
+function findSmallestNumberAmongMixedElements(arr) {
+  let newArr = [];
+  for (let elem of arr) {
+    if (typeof elem === 'number') {
+      newArr.push(elem);
+    }
+  }
+
+  if (newArr.length > 0) {
+    return newArr.sort((a, b) => a - b)[0];
+  }
+  return 0;
+}
+
+/*
+Write a function called "getLongestWordOfMixedElements".
+
+Given an array of mixed types, "getLongestWordOfMixedElements" returns the longest string in the given array.
+
+Notes:
+
+If the array is empty, it should return an empty string ("").
+If the array contains no strings; it should return an empty string.
+var output = getLongestWordOfMixedElements([3, 'word', 5, 'up', 3, 1]);
+console.log(output); // --> 'word'
+*/
+function getLongestWordOfMixedElements(arr) {
+  let newArr = [];
+  for (let elem of arr) {
+    if (typeof elem === 'string') {
+      newArr.push(elem);
+    }
+  }
+
+  if (newArr.length > 0) {
+    return newArr.sort((a, b) => b.length - a.length)[0];
+  }
+  return '';
+}
+
+/*
+Write a function called "getLargestNumberAmongMixedElements".
+
+Given any array, "getLargestNumberAmongMixedElements" returns the largest number in the given array.
+
+Notes:
+
+The array might contain values of a type other than numbers.
+If the array is empty, it should return 0.
+If the array contains no numbers, it should return 0.
+var output = getLargestNumberAmongMixedElements([3, 'word', 5, 'up', 3, 1]);
+console.log(output); // --> 5
+*/
+function getLargestNumberAmongMixedElements(arr) {
+  let newArr = [];
+  for (let elem of arr) {
+    if (typeof elem === 'number') {
+      newArr.push(elem);
+    }
+  }
+
+  if (newArr.length > 0) {
+    return newArr.sort((a, b) => b - a)[0];
+  }
+  return 0;
+}
+
+/*
+Write a function called "computeSummationToN".
+
+Given a number, "computeSummationToN" returns the sum of sequential numbers leading up to the given number, beginning at 0.
+
+Notes:
+
+If n = 4, it should calculate the sum of 1 + 2 + 3 + 4, and return 10.
+var output = computeSummationToN(6);
+console.log(output); // --> 21
+*/
+function computeSummationToN(n) {
+  let sum = 0;
+  for (let i = 0; i <= n; i++) {
+    sum += i;
+  }
+  return sum;
+}
