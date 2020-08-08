@@ -26,7 +26,7 @@ You should see that it says ‘Test failed’, but that is because we haven’t 
 
 ## Let’s add some code and write our tests
 
-I have already gone ahead and created a file called `testing_file.js` . In that file, I have two functions called `map` and `cubeAll`.
+I have already gone ahead and created a file called [`testing_file.js`](https://github.com/rclarkem/Algorithms-DataStructures/blob/master/js_practice/Testing/testing_file.js) . In that file, I have two functions called `map` and `cubeAll`.
 
 The `map` is a higher-order function. It takes two arguments: _an array_ and a _callback function_. It will iterate over each element in the array, applying a callback function to each element. It should then return a new array whose elements are the result of applying the callback function to each element in the input array.
 
