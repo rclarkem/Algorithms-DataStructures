@@ -16,4 +16,4 @@ We are going to save it as a dev dependency because we are only using it when we
 
 Now, go inside of that package.json and under `"scripts"`, where it says `"tests"` , write in: `"jest"`.
 
-![ptest](https://github.com/rclarkem/Algorithms-DataStructures/blob/master/imgs/Screen%20Shot%202020-08-07%20at%207.03.24%20PM.png)
+![ptest](/Users/reinamitchell/personal-projects/algos-practice/imgs/jest.jpg)
