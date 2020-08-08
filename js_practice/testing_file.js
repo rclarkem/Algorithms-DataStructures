@@ -10,17 +10,20 @@ cubeAll will return an array of those numbers having been cubed.
 */
 
 function map(array, callbackFunction) {
-  var newArray = [];
+	var newArray = [];
 
-  for (var i = 0; i < array.length; i++) {
-    newArray.push(callbackFunction(array[i]));
-  }
+	for (var i = 0; i < array.length; i++) {
+		newArray.push(callbackFunction(array[i]));
+	}
 
-  return newArray;
+	return newArray;
 }
 
 function cubeAll(arrOfNumbers) {
-  return map(arrOfNumbers, function (n) {
-    return n * n;
-  });
+	return map(arrOfNumbers, function (n) {
+		return n * n;
+	});
 }
+
+exports.map = map;
+exports.cubeAll = cubeAll;
