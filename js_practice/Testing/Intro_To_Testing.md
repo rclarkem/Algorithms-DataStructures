@@ -68,7 +68,7 @@ exports.map = map;
 exports.cubeAll = cubeAll;
 ```
 
-We will then create our test file. We will name is `testing_file.test.js.`
+We will then create our test file. We will name is [`testing_file.test.js.`](https://github.com/rclarkem/Algorithms-DataStructures/blob/master/js_practice/Testing/testing_file.test.js)
 
 We will import our functions into the new test file.
 
