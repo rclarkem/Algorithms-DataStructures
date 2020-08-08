@@ -15,4 +15,5 @@ From here, we are going to add Jest to our `package.json`. In your terminal, wri
 We are going to save it as a dev dependency because we are only using it when we are developing our project.
 
 Now, go inside of that package.json and under `"scripts"`, where it says `"tests"` , write in: `"jest"`.
-![packageJsonfile]('../../imgs/Screen Shot 2020-08-07 at 7.03.24 PM.png')
+
+![ptest](https://github.com/rclarkem/Algorithms-DataStructures/blob/master/imgs/Screen%20Shot%202020-08-07%20at%207.03.24%20PM.png)
