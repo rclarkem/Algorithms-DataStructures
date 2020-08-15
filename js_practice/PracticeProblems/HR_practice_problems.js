@@ -8,18 +8,18 @@ If given an empty string, it should return an empty array.
 You should be familiar with the 'split' method. */
 
 function getAllLetters(str) {
-	if (!str) {
-		return [];
-	} else {
-		return str.split("").join("").split("");
-	}
+  if (!str) {
+    return [];
+  } else {
+    return str.split("").join("").split("");
+  }
 }
 
 var outputOne = getAllLetters("Radagast");
 console.log(outputOne); // --> ['R', 'a', 'd', 'a', 'g', 'a', 's', 't']
 
 function getAllWords(str) {
-	return !str ? [] : str.split(" ");
+  return !str ? [] : str.split(" ");
 }
 
 var outputTwo = getAllWords("Radagast the Brown");
@@ -33,20 +33,20 @@ Notes:
 
 If given an empty string, it should return an empty object. */
 function countWords(str) {
-	let newObj = {};
-	if (!str) {
-		return newObj;
-	} else {
-		let splittedStr = str.split(" ");
-		for (let word of splittedStr) {
-			if (newObj[word]) {
-				newObj[word]++;
-			} else {
-				newObj[word] = 1;
-			}
-		}
-	}
-	return newObj;
+  let newObj = {};
+  if (!str) {
+    return newObj;
+  } else {
+    let splittedStr = str.split(" ");
+    for (let word of splittedStr) {
+      if (newObj[word]) {
+        newObj[word]++;
+      } else {
+        newObj[word] = 1;
+      }
+    }
+  }
+  return newObj;
 }
 
 var outputThree = countWords("ask a bunch get a bunch");
@@ -63,7 +63,7 @@ Use ! and && operators instead.
  */
 
 function or(expression1, expression2) {
-	return expression1 === true ? true : expression2 === true ? true : false;
+  return expression1 === true ? true : expression2 === true ? true : false;
 }
 
 var outputFour = or(true, false);
@@ -74,7 +74,7 @@ var outputFour = or(true, false);
 Given two numbers, 'isEitherEvenOrAreBoth7' returns whether at least one of them is even, or, both of them are 7. */
 
 function isEitherEvenOrAreBoth7(num1, num2) {
-	return num1 === 7 && num2 === 7 ? true : num1 % 2 === 0 || num2 % 2 === 0 ? true : false;
+  return num1 === 7 && num2 === 7 ? true : num1 % 2 === 0 || num2 % 2 === 0 ? true : false;
 }
 
 // A little unreadable, but I just wanted practice with ternary
@@ -90,7 +90,7 @@ var outputFive = isEitherEvenOrAreBoth7(2, 3);
 Given two numbers, 'isEitherEvenAndLessThan9' returns whether at least one of them is even, and, both of them are less than 9. */
 
 function isEitherEvenAndLessThan9(num1, num2) {
-	return num1 < 9 && num2 < 9 && num1 % 2 === 0 ? true : num1 < 9 && num2 < 9 && num2 % 2 === 0 ? true : false;
+  return num1 < 9 && num2 < 9 && num1 % 2 === 0 ? true : num1 < 9 && num2 < 9 && num2 % 2 === 0 ? true : false;
 }
 
 var outputSix = isEitherEvenAndLessThan9(2, 4);
@@ -110,21 +110,21 @@ If the 1st object already has a given key, ignore it (do not overwrite the prope
 Do not modify the 2nd object at all. */
 
 var obj1 = {
-	a: 1,
-	b: 2,
+  a: 1,
+  b: 2,
 };
 var obj2 = {
-	b: 4,
-	c: 3,
+  b: 4,
+  c: 3,
 };
 
 function extend(obj1, obj2) {
-	for (let key in obj2) {
-		if (!obj1[key]) {
-			obj1[key] = obj2[key];
-		}
-	}
-	return obj1;
+  for (let key in obj2) {
+    if (!obj1[key]) {
+      obj1[key] = obj2[key];
+    }
+  }
+  return obj1;
 }
 
 extend(obj1, obj2);
@@ -144,12 +144,12 @@ removeStringValues(obj);
 console.log(obj); // { age: 20 }*/
 
 function removeStringValues(obj) {
-	for (let prop in obj) {
-		if (typeof obj[prop] === "string") {
-			delete obj[prop];
-		}
-	}
-	return obj;
+  for (let prop in obj) {
+    if (typeof obj[prop] === "string") {
+      delete obj[prop];
+    }
+  }
+  return obj;
 }
 
 /*
@@ -167,12 +167,12 @@ console.log(obj); // --> { b: 'remaining' }
 */
 
 function removeNumberValues(obj) {
-	for (let prop in obj) {
-		if (typeof obj[prop] === "number") {
-			delete obj[prop];
-		}
-	}
-	return obj;
+  for (let prop in obj) {
+    if (typeof obj[prop] === "number") {
+      delete obj[prop];
+    }
+  }
+  return obj;
 }
 /*Write a function called "removeArrayValues".
 
@@ -187,12 +187,12 @@ removeArrayValues(obj);
 console.log(obj); // --> { b: 2 }*/
 
 function removeArrayValues(obj) {
-	for (let prop in obj) {
-		if (Array.isArray(obj[prop])) {
-			delete obj[prop];
-		}
-	}
-	return obj;
+  for (let prop in obj) {
+    if (Array.isArray(obj[prop])) {
+      delete obj[prop];
+    }
+  }
+  return obj;
 }
 
 /*Write a function called "removeNumbersLargerThan".
@@ -207,11 +207,11 @@ var obj = {
 removeNumbersLargerThan(5, obj);
 console.log(obj); // --> { b: 2, c: 'montana' }*/
 function removeNumbersLargerThan(num, obj) {
-	for (let prop in obj) {
-		if (typeof obj[prop] === "number" && obj[prop] > num) {
-			delete obj[prop];
-		}
-	}
+  for (let prop in obj) {
+    if (typeof obj[prop] === "number" && obj[prop] > num) {
+      delete obj[prop];
+    }
+  }
 }
 
 /*Write a function called "removeNumbersLessThan".
@@ -226,11 +226,11 @@ var obj = {
 removeNumbersLessThan(5, obj);
 console.log(obj); // --> { a: 8, c: 'montana' }*/
 function removeNumbersLessThan(num, obj) {
-	for (let prop in obj) {
-		if (typeof obj[prop] === "number" && obj[prop] < num) {
-			delete obj[prop];
-		}
-	}
+  for (let prop in obj) {
+    if (typeof obj[prop] === "number" && obj[prop] < num) {
+      delete obj[prop];
+    }
+  }
 }
 
 /*Write a function called "removeStringValuesLongerThan".
@@ -245,12 +245,12 @@ var obj = {
 removeStringValuesLongerThan(6, obj);
 console.log(obj); // { age: 20, location: 'Texas' }*/
 function removeStringValuesLongerThan(num, obj) {
-	for (let prop in obj) {
-		if (typeof obj[prop] === "string" && obj[prop].length > num) {
-			delete obj[prop];
-		}
-	}
-	return obj;
+  for (let prop in obj) {
+    if (typeof obj[prop] === "string" && obj[prop].length > num) {
+      delete obj[prop];
+    }
+  }
+  return obj;
 }
 /*
 Write a function called "removeEvenValues".
@@ -270,12 +270,12 @@ removeEvenValues(obj);
 console.log(obj); // --> { b: 3 }
 */
 function removeEvenValues(obj) {
-	for (let key in obj) {
-		if (typeof obj[key] === "number" && obj[key] % 2 === 0) {
-			delete obj[key];
-		}
-	}
-	return obj;
+  for (let key in obj) {
+    if (typeof obj[key] === "number" && obj[key] % 2 === 0) {
+      delete obj[key];
+    }
+  }
+  return obj;
 }
 
 /*
@@ -292,12 +292,12 @@ removeOddValues(obj);
 console.log(obj); // --> { a: 2, c: 4 }
 */
 function removeOddValues(obj) {
-	for (let key in obj) {
-		if (typeof obj[key] === "number" && obj[key] % 2) {
-			delete obj[key];
-		}
-	}
-	return obj;
+  for (let key in obj) {
+    if (typeof obj[key] === "number" && obj[key] % 2) {
+      delete obj[key];
+    }
+  }
+  return obj;
 }
 
 /*
@@ -314,7 +314,7 @@ var output = countNumberOfKeys(obj);
 console.log(output); // --> 3
 */
 function countNumberOfKeys(obj) {
-	return Object.keys(obj).length;
+  return Object.keys(obj).length;
 }
 
 /* Write a function called "convertDoubleSpaceToSingle".
@@ -328,7 +328,7 @@ Notes:
 In order to do this problem, you should be familiar with "String.split", and "Array.join". */
 
 function convertDoubleSpaceToSingle(str) {
-	return str.split("  ").join(" ");
+  return str.split("  ").join(" ");
 }
 
 /* Write a function called "joinThreeArrays".
@@ -339,7 +339,7 @@ var output = joinThreeArrays([1, 2], [3, 4], [5, 6]);
 console.log(output); // --> [1, 2, 3, 4, 5, 6]
 You should be familiar with the "concat" method for this problem. */
 function joinThreeArrays(arr1, arr2, arr3) {
-	return [].slice.call(arguments).reduce((acc, cur) => acc.concat(cur), []);
+  return [].slice.call(arguments).reduce((acc, cur) => acc.concat(cur), []);
 }
 
 /* Write a function called "addToFrontOfNew".
@@ -353,9 +353,9 @@ var output = addToFrontOfNew(input, 3);
 console.log(output); // --> [3, 1, 2];
 console.log(input); // --> [1, 2] */
 function addToFrontOfNew(arr, element) {
-	let newArr = arr.slice();
-	newArr.unshift(element);
-	return newArr;
+  let newArr = arr.slice();
+  newArr.unshift(element);
+  return newArr;
 }
 
 /* Write a function called "addToBackNew".
@@ -369,9 +369,9 @@ var output = addToBackOfNew(input, 3);
 console.log(input); // --> [1, 2]
 console.log(output); // --> [1, 2, 3] */
 function addToBackOfNew(arr, element) {
-	let newArr = arr.slice();
-	newArr.push(element);
-	return newArr;
+  let newArr = arr.slice();
+  newArr.push(element);
+  return newArr;
 }
 
 /* Write a function called "getAllElementsButNth".
@@ -381,8 +381,8 @@ Given an array and an index, "getAllElementsButNth" returns an array with all th
 var output = getAllElementsButNth(['a', 'b', 'c'], 1);
 console.log(output); // --> ['a', 'c'] */
 function getAllElementsButNth(array, n) {
-	array.splice(n, 1);
-	return array;
+  array.splice(n, 1);
+  return array;
 }
 
 /* Write a function called "getIndexOf".
@@ -398,12 +398,12 @@ Do not use the native indexOf function in your implementation.
 var output = getIndexOf('a', 'I am a hacker');
 console.log(output); // --> 2 */
 function getIndexOf(char, str) {
-	for (let i = 0; i < str.length; i++) {
-		if (str[i] === char) {
-			return i;
-		}
-	}
-	return -1;
+  for (let i = 0; i < str.length; i++) {
+    if (str[i] === char) {
+      return i;
+    }
+  }
+  return -1;
 }
 
 /* Write a function called "areValidCredentials".
@@ -413,7 +413,7 @@ Given a name and a password, "areValidCredentials", returns true if the name is 
 var output = areValidCredentials('Ritu', 'mylongpassword')
 console.log(output); // --> true */
 function areValidCredentials(name, password) {
-	return name.length > 3 && password.length >= 8;
+  return name.length > 3 && password.length >= 8;
 }
 
 /* Write a function called "findMinLengthOfThreeWords".
@@ -424,9 +424,9 @@ var output = findMinLengthOfThreeWords('a', 'be', 'see');
 console.log(output); // --> 1 */
 
 function findMinLengthOfThreeWords(word1, word2, word3) {
-	let arr = [].slice.call(arguments).sort((a, b) => b.length - a.length);
-	//or put the [word1, word2, word3] and put sort method on this
-	return arr[arr.length - 1].length;
+  let arr = [].slice.call(arguments).sort((a, b) => b.length - a.length);
+  //or put the [word1, word2, word3] and put sort method on this
+  return arr[arr.length - 1].length;
 }
 
 /* Write a function called "findMaxLengthOfThreeWords".
@@ -436,11 +436,11 @@ Given 3 words, "findMaxLengthOfThreeWords" returns the length of the longest wor
 var output = findMaxLengthOfThreeWords('a', 'be', 'see');
 console.log(output); // --> 3 */
 function findMaxLengthOfThreeWords(word1, word2, word3) {
-	let arr = [].slice.call(arguments).sort((a, b) => {
-		//or put the [word1, word2, word3] and put sort method on this
-		return b.length - a.length;
-	});
-	return arr[0].length;
+  let arr = [].slice.call(arguments).sort((a, b) => {
+    //or put the [word1, word2, word3] and put sort method on this
+    return b.length - a.length;
+  });
+  return arr[0].length;
 }
 
 /* Write a function called "getLongestOfThreeWords".
@@ -454,8 +454,8 @@ var output = getLongestOfThreeWords('these', 'three', 'words');
 console.log(output); // --> 'these' */
 
 function getLongestOfThreeWords(word1, word2, word3) {
-	return [].slice.call(arguments).sort((a, b) => b.length - a.length)[0];
-	//or put the [word1, word2, word3] and put sort method on this
+  return [].slice.call(arguments).sort((a, b) => b.length - a.length)[0];
+  //or put the [word1, word2, word3] and put sort method on this
 }
 
 /* Write a function called "findShortestOfThreeWords".
@@ -468,7 +468,7 @@ If there are ties, it should return the first word in the parameters list.
 var output = findShortestOfThreeWords('a', 'two', 'three');
 console.log(output); // --> 'a' */
 function findShortestOfThreeWords(word1, word2, word3) {
-	return [].slice.call(arguments).sort((a, b) => a.length - b.length)[0];
+  return [].slice.call(arguments).sort((a, b) => a.length - b.length)[0];
 }
 
 /*
@@ -492,13 +492,13 @@ console.log(output); // --> { a: 1, c: 3 }
 */
 
 function select(arr, obj) {
-	let newObj = {};
-	for (let value of arr) {
-		if (obj[value]) {
-			newObj[value] = obj[value];
-		}
-	}
-	return newObj;
+  let newObj = {};
+  for (let value of arr) {
+    if (obj[value]) {
+      newObj[value] = obj[value];
+    }
+  }
+  return newObj;
 }
 
 /* Write a function called "filterOddLengthWords".
@@ -508,7 +508,7 @@ Given an array of strings, "filterOddLengthWords" returns an array containing on
 var output = filterOddLengthWords(['there', 'it', 'is', 'now']);
 console.log(output); // --> ['there', "now'] */
 function filterOddLengthWords(words) {
-	return words.filter((word) => word.length % 2);
+  return words.filter((word) => word.length % 2);
 }
 
 /* Write a function called "filterEvenLengthWords".
@@ -519,7 +519,7 @@ var output = filterEvenLengthWords(['word', 'words', 'word', 'words']);
 console.log(output); // --> ['word', 'word'] */
 
 function filterEvenLengthWords(words) {
-	return words.filter((word) => word.length % 2 === 0);
+  return words.filter((word) => word.length % 2 === 0);
 }
 
 /* Write a function called "getLengthOfLongestElement".
@@ -533,14 +533,14 @@ var output = getLengthOfLongestElement(['one', 'two', 'three']);
 console.log(output); // --> 5 */
 
 function getLengthOfLongestElement(arr) {
-	if (arr.length > 0) {
-		return arr
-			.filter((word) => {
-				return typeof word === "string";
-			})
-			.sort((a, b) => b.length - a.length)[0].length;
-	}
-	return 0;
+  if (arr.length > 0) {
+    return arr
+      .filter((word) => {
+        return typeof word === "string";
+      })
+      .sort((a, b) => b.length - a.length)[0].length;
+  }
+  return 0;
 }
 
 /* Write a function called "squareElements". Given an array of numbers, "squareElements" should return a new array where each element is the square of the element of the given array.
@@ -549,12 +549,12 @@ var output = squareElements([1, 2, 3]);
 console.log(output); // --> [1, 4, 9] */
 
 function squareElements(arr) {
-	//   return arr.map(elem => elem ** 2 )
-	let newArr = [];
-	for (let num of arr) {
-		newArr.push(num ** 2);
-	}
-	return newArr;
+  //   return arr.map(elem => elem ** 2 )
+  let newArr = [];
+  for (let num of arr) {
+    newArr.push(num ** 2);
+  }
+  return newArr;
 }
 
 /* Write a function called "filterOddElements".
@@ -565,7 +565,7 @@ var output = filterOddElements([1, 2, 3, 4, 5]);
 console.log(output); // --> [1, 3, 5] */
 
 function filterOddElements(arr) {
-	return arr.filter((elem) => elem % 2);
+  return arr.filter((elem) => elem % 2);
 }
 
 /* Given an array of numbers, "computeProductOfAllElements" returns the products of all the elements in the given array.
@@ -577,10 +577,10 @@ var output = computeProductOfAllElements([2, 5, 6]);
 console.log(output); // --> 60 */
 
 function computeProductOfAllElements(arr) {
-	if (arr.length < 1) {
-		return 0;
-	}
-	return arr.reduce((acc, curr) => acc * curr);
+  if (arr.length < 1) {
+    return 0;
+  }
+  return arr.reduce((acc, curr) => acc * curr);
 }
 
 /* Write a function called "filterEvenElements".
@@ -590,7 +590,7 @@ Given an array of numbers, "filterEvenElements" returns an array containing only
 var output = filterEvenElements([2, 3, 4, 5, 6]);
 console.log(output); // --> [2, 4, 6] */
 function filterEvenElements(arr) {
-	return arr.filter((num) => num % 2 === 0);
+  return arr.filter((num) => num % 2 === 0);
 }
 
 /* Write a function called "getLengthOfShortestElement".
@@ -603,12 +603,12 @@ It should return 0 if the array is empty.
 var output = getLengthOfShortestElement(['one', 'two', 'three']);
 console.log(output); // --> 3 */
 function getLengthOfShortestElement(arr) {
-	if (arr.length < 1) {
-		return 0;
-	} else {
-		let newArr = JSON.parse(JSON.stringify(arr));
-		return newArr.sort((a, b) => a.length - b.length)[0].length;
-	}
+  if (arr.length < 1) {
+    return 0;
+  } else {
+    let newArr = JSON.parse(JSON.stringify(arr));
+    return newArr.sort((a, b) => a.length - b.length)[0].length;
+  }
 }
 
 /* Write a function called "getLongestElement".
@@ -622,12 +622,12 @@ If the array is empty, it should return an empty string.
 var output = getLongestElement(['one', 'two', 'three']);
 console.log(output); // --> 'three' */
 function getLongestElement(arr) {
-	if (arr.length < 1) {
-		return "";
-	} else {
-		let newArr = JSON.parse(JSON.stringify(arr));
-		return newArr.sort((a, b) => b.length - a.length)[0];
-	}
+  if (arr.length < 1) {
+    return "";
+  } else {
+    let newArr = JSON.parse(JSON.stringify(arr));
+    return newArr.sort((a, b) => b.length - a.length)[0];
+  }
 }
 
 /* Write a function called "findSmallestElement".
@@ -641,16 +641,16 @@ var output = findSmallestElement([4, 1, 9, 10]);
 console.log(output); // --> 1 */
 
 function findSmallestElement(arr) {
-	if (arr.length < 1) {
-		return 0;
-	}
-	let smallest = arr[0];
-	for (let i = 1; i < arr.length; i++) {
-		if (arr[i] < smallest) {
-			smallest = arr[i];
-		}
-	}
-	return smallest;
+  if (arr.length < 1) {
+    return 0;
+  }
+  let smallest = arr[0];
+  for (let i = 1; i < arr.length; i++) {
+    if (arr[i] < smallest) {
+      smallest = arr[i];
+    }
+  }
+  return smallest;
 }
 
 /* Write a function called "findShortestElement".
@@ -665,16 +665,16 @@ var output = findShortestElement(['a', 'two', 'three']);
 console.log(output); // --> 'a' */
 
 function findShortestElement(arr) {
-	if (arr.length < 1) {
-		return "";
-	}
-	let smallest = arr[0];
-	for (let i = 1; i < arr.length; i++) {
-		if (arr[i].length < smallest.length) {
-			smallest = arr[i];
-		}
-	}
-	return smallest;
+  if (arr.length < 1) {
+    return "";
+  }
+  let smallest = arr[0];
+  for (let i = 1; i < arr.length; i++) {
+    if (arr[i].length < smallest.length) {
+      smallest = arr[i];
+    }
+  }
+  return smallest;
 }
 
 /* Write a function called "getLargestElement".
@@ -684,7 +684,7 @@ Given an array, "getLargestElement" returns the largest number in the given arra
 var output = getLargestElement([5, 2, 8, 3]);
 console.log(output); // --> 8; */
 function getLargestElement(arr) {
-	return arr.sort((a, b) => b - a)[0];
+  return arr.sort((a, b) => b - a)[0];
 }
 
 /* Write a function called "computeSumOfAllElements".
@@ -695,7 +695,7 @@ var output = computeSumOfAllElements([1, 2, 3])
 console.log(output); // --> 6 */
 
 function computeSumOfAllElements(arr) {
-	return arr.reduce((acc, curr) => acc + curr, 0);
+  return arr.reduce((acc, curr) => acc + curr, 0);
 }
 
 /*
@@ -716,12 +716,12 @@ var output = getElementsThatEqual10AtProperty(obj, 'key');
 console.log(output); // --> [10, 10]
 */
 function getElementsThatEqual10AtProperty(obj, key) {
-	if (obj.hasOwnProperty(key)) {
-		if (Array.isArray(obj[key])) {
-			return obj[key].filter((num) => num === 10);
-		}
-	}
-	return [];
+  if (obj.hasOwnProperty(key)) {
+    if (Array.isArray(obj[key])) {
+      return obj[key].filter((num) => num === 10);
+    }
+  }
+  return [];
 }
 
 /*
@@ -742,12 +742,12 @@ var output = getElementsLessThan100AtProperty(obj, 'key');
 console.log(output); // --> [20, 50]
 */
 function getElementsLessThan100AtProperty(obj, key) {
-	if (obj.hasOwnProperty(key)) {
-		if (Array.isArray(obj[key])) {
-			return obj[key].filter((num) => num < 100);
-		}
-	}
-	return [];
+  if (obj.hasOwnProperty(key)) {
+    if (Array.isArray(obj[key])) {
+      return obj[key].filter((num) => num < 100);
+    }
+  }
+  return [];
 }
 
 /* Write a function called "countAllCharacters".
@@ -761,16 +761,16 @@ var output = countAllCharacters('banana');
 console.log(output); // --> {b: 1, a: 3, n: 2} */
 
 function countAllCharacters(str) {
-	let newObj = {};
+  let newObj = {};
 
-	for (let letter of str) {
-		if (newObj[letter]) {
-			newObj[letter]++;
-		} else {
-			newObj[letter] = 1;
-		}
-	}
-	return newObj;
+  for (let letter of str) {
+    if (newObj[letter]) {
+      newObj[letter]++;
+    } else {
+      newObj[letter] = 1;
+    }
+  }
+  return newObj;
 }
 
 /*
@@ -791,12 +791,12 @@ var output = getElementsGreaterThan10AtProperty(obj, 'key');
 console.log(output); // --> [20, 30]
 */
 function getElementsGreaterThan10AtProperty(obj, key) {
-	if (obj.hasOwnProperty(key)) {
-		if (Array.isArray(obj[key])) {
-			return obj[key].filter((num) => num > 10);
-		}
-	}
-	return [];
+  if (obj.hasOwnProperty(key)) {
+    if (Array.isArray(obj[key])) {
+      return obj[key].filter((num) => num > 10);
+    }
+  }
+  return [];
 }
 
 /*
@@ -817,11 +817,11 @@ console.log(output); // --> 1
 */
 
 function getFirstElementOfProperty(obj, key) {
-	if (obj.hasOwnProperty(key)) {
-		if (Array.isArray(obj[key])) {
-			return obj[key][0];
-		}
-	}
+  if (obj.hasOwnProperty(key)) {
+    if (Array.isArray(obj[key])) {
+      return obj[key][0];
+    }
+  }
 }
 
 /*
@@ -843,12 +843,12 @@ console.log(output); // --> 2
 */
 
 function getNthElementOfProperty(obj, key, n) {
-	if (obj.hasOwnProperty(key)) {
-		if (Array.isArray(obj[key])) {
-			return obj[key][n];
-		}
-	}
-	return undefined;
+  if (obj.hasOwnProperty(key)) {
+    if (Array.isArray(obj[key])) {
+      return obj[key][n];
+    }
+  }
+  return undefined;
 }
 
 /*
@@ -868,13 +868,13 @@ var output = getLastElementOfProperty(obj, 'key');
 console.log(output); // --> 5
  */
 function getLastElementOfProperty(obj, key) {
-	if (obj.hasOwnProperty(key)) {
-		if (Array.isArray(obj[key])) {
-			const arr = obj[key];
-			return arr[arr.length - 1];
-		}
-	}
-	return undefined;
+  if (obj.hasOwnProperty(key)) {
+    if (Array.isArray(obj[key])) {
+      const arr = obj[key];
+      return arr[arr.length - 1];
+    }
+  }
+  return undefined;
 }
 
 /*
@@ -891,7 +891,7 @@ console.log(output); // --> [1, 3, 1]
  */
 
 function removeElement(array, discarder) {
-	return array.filter((elem) => elem !== discarder);
+  return array.filter((elem) => elem !== discarder);
 }
 
 /*
@@ -906,7 +906,7 @@ var output = keep([1, 2, 3, 2, 1], 2)
 console.log(output); --> [2, 2]
 */
 function keep(array, keeper) {
-	return array.filter((elem) => elem === keeper);
+  return array.filter((elem) => elem === keeper);
 }
 
 /*Write a function called "computeAverageOfNumbers".
@@ -921,10 +921,10 @@ var output = computeAverageOfNumbers(input);
 console.log(output); // --> 3 */
 
 function computeAverageOfNumbers(nums) {
-	if (nums.length < 1) {
-		return 0;
-	}
-	return nums.reduce((acc, curr) => acc + curr, 0) / nums.length;
+  if (nums.length < 1) {
+    return 0;
+  }
+  return nums.reduce((acc, curr) => acc + curr, 0) / nums.length;
 }
 
 /*
@@ -946,12 +946,12 @@ console.log(output); // --> ['has', 'words']
 */
 
 function getOddLengthWordsAtProperty(obj, key) {
-	if (obj.hasOwnProperty(key)) {
-		if (Array.isArray(obj[key])) {
-			return obj[key].filter((word) => word.length % 2);
-		}
-	}
-	return [];
+  if (obj.hasOwnProperty(key)) {
+    if (Array.isArray(obj[key])) {
+      return obj[key].filter((word) => word.length % 2);
+    }
+  }
+  return [];
 }
 
 /*
@@ -974,12 +974,12 @@ console.log(output); // --> 2
 */
 
 function getAverageOfElementsAtProperty(obj, key) {
-	if (obj.hasOwnProperty(key) && Array.isArray(obj[key])) {
-		if (obj[key].length > 1) {
-			return obj[key].reduce((a, b) => a + b, 0) / obj[key].length;
-		}
-	}
-	return 0;
+  if (obj.hasOwnProperty(key) && Array.isArray(obj[key])) {
+    if (obj[key].length > 1) {
+      return obj[key].reduce((a, b) => a + b, 0) / obj[key].length;
+    }
+  }
+  return 0;
 }
 
 /*
@@ -1003,12 +1003,12 @@ console.log(output); // --> ['long', 'game']
 */
 
 function getEvenLengthWordsAtProperty(obj, key) {
-	if (obj.hasOwnProperty(key)) {
-		if (Array.isArray(obj[key])) {
-			return obj[key].filter((word) => word.length % 2 === 0);
-		}
-	}
-	return [];
+  if (obj.hasOwnProperty(key)) {
+    if (Array.isArray(obj[key])) {
+      return obj[key].filter((word) => word.length % 2 === 0);
+    }
+  }
+  return [];
 }
 
 /*
@@ -1029,13 +1029,13 @@ console.log(output); // --> [4, 1, 25]
 */
 
 function getSquaredElementsAtProperty(obj, key) {
-	const arr = obj[key];
-	if (obj.hasOwnProperty(key) && Array.isArray(arr)) {
-		if (arr.length > 1) {
-			return arr.map((word) => word ** 2);
-		}
-	}
-	return [];
+  const arr = obj[key];
+  if (obj.hasOwnProperty(key) && Array.isArray(arr)) {
+    if (arr.length > 1) {
+      return arr.map((word) => word ** 2);
+    }
+  }
+  return [];
 }
 
 /*
@@ -1056,13 +1056,13 @@ var output = getOddElementsAtProperty(obj, 'key');
 console.log(output); // --> [1, 3, 5] 
 */
 function getOddElementsAtProperty(obj, key) {
-	const arr = obj[key];
-	if (obj.hasOwnProperty(key) && Array.isArray(arr)) {
-		if (arr.length > 1) {
-			return arr.filter((num) => num % 2);
-		}
-	}
-	return [];
+  const arr = obj[key];
+  if (obj.hasOwnProperty(key) && Array.isArray(arr)) {
+    if (arr.length > 1) {
+      return arr.filter((num) => num % 2);
+    }
+  }
+  return [];
 }
 
 /*
@@ -1084,13 +1084,13 @@ console.log(output); // --> [1000, 50]
 */
 
 function getEvenElementsAtProperty(obj, key) {
-	const arr = obj[key];
-	if (obj.hasOwnProperty(key) && Array.isArray(arr)) {
-		if (arr.length > 1) {
-			return arr.filter((num) => num % 2 === 0);
-		}
-	}
-	return [];
+  const arr = obj[key];
+  if (obj.hasOwnProperty(key) && Array.isArray(arr)) {
+    if (arr.length > 1) {
+      return arr.filter((num) => num % 2 === 0);
+    }
+  }
+  return [];
 }
 
 /*
@@ -1110,13 +1110,13 @@ var output = getSmallestElementAtProperty(obj, 'key');
 console.log(output); // --> 1
 */
 function getSmallestElementAtProperty(obj, key) {
-	const arr = obj[key];
-	if (obj.hasOwnProperty(key) && Array.isArray(arr)) {
-		if (arr.length > 1) {
-			return arr.slice().sort((a, b) => a - b)[0];
-		}
-	}
-	return undefined;
+  const arr = obj[key];
+  if (obj.hasOwnProperty(key) && Array.isArray(arr)) {
+    if (arr.length > 1) {
+      return arr.slice().sort((a, b) => a - b)[0];
+    }
+  }
+  return undefined;
 }
 
 /*
@@ -1137,13 +1137,13 @@ console.log(output); // --> 4
 */
 
 function getLargestElementAtProperty(obj, key) {
-	const arr = obj[key];
-	if (obj.hasOwnProperty(key) && Array.isArray(arr)) {
-		if (arr.length > 1) {
-			return arr.slice().sort((a, b) => b - a)[0];
-		}
-	}
-	return undefined;
+  const arr = obj[key];
+  if (obj.hasOwnProperty(key) && Array.isArray(arr)) {
+    if (arr.length > 1) {
+      return arr.slice().sort((a, b) => b - a)[0];
+    }
+  }
+  return undefined;
 }
 
 /*
@@ -1164,13 +1164,13 @@ console.log(output); // --> [1,2]
 */
 
 function getAllButLastElementOfProperty(obj, key) {
-	const arr = obj[key];
-	if (obj.hasOwnProperty(key) && Array.isArray(arr)) {
-		if (arr.length > 1) {
-			return arr.slice(0, arr[arr.length - 2]);
-		}
-	}
-	return [];
+  const arr = obj[key];
+  if (obj.hasOwnProperty(key) && Array.isArray(arr)) {
+    if (arr.length > 1) {
+      return arr.slice(0, arr[arr.length - 2]);
+    }
+  }
+  return [];
 }
 
 /*
@@ -1192,13 +1192,13 @@ console.log(output); // --> 'Jamil'
 
 */
 function getElementOfArrayProperty(obj, key, index) {
-	const arr = obj[key];
-	if (obj.hasOwnProperty(key) && Array.isArray(arr)) {
-		if (arr.length > 1) {
-			return arr.slice()[index];
-		}
-	}
-	return undefined;
+  const arr = obj[key];
+  if (obj.hasOwnProperty(key) && Array.isArray(arr)) {
+    if (arr.length > 1) {
+      return arr.slice()[index];
+    }
+  }
+  return undefined;
 }
 
 /*
@@ -1214,9 +1214,9 @@ var output = calculateBillTotal(20);
 console.log(output); // --> 24.9
 */
 function calculateBillTotal(preTaxAndTipAmount) {
-	const salesTax = preTaxAndTipAmount * (9.5 / 100);
-	const afterTip = preTaxAndTipAmount * (15 / 100) + preTaxAndTipAmount;
-	return afterTip + salesTax;
+  const salesTax = preTaxAndTipAmount * (9.5 / 100);
+  const afterTip = preTaxAndTipAmount * (15 / 100) + preTaxAndTipAmount;
+  return afterTip + salesTax;
 }
 
 /*
@@ -1232,13 +1232,13 @@ var output = getStringLength('hello');
 console.log(output); // --> 5
 */
 function getStringLength(string) {
-	let counter = 0;
-	if (string !== "") {
-		for (let letter of string) {
-			counter++;
-		}
-	}
-	return counter;
+  let counter = 0;
+  if (string !== "") {
+    for (let letter of string) {
+      counter++;
+    }
+  }
+  return counter;
 }
 
 /*
@@ -1251,7 +1251,7 @@ console.log(output); // --> [1, 4, true, false, 'x', 'y']
 You should be familiar with the "concat" method for this problem.
 */
 function joinArrayOfArrays(arr) {
-	return arr.reduce((acc, cur) => acc.concat(cur));
+  return arr.reduce((acc, cur) => acc.concat(cur));
 }
 
 /*
@@ -1271,12 +1271,12 @@ var output = getProductOfAllElementsAtProperty(obj, 'key');
 console.log(output); // --> 24
 */
 function getProductOfAllElementsAtProperty(obj, key) {
-	if (obj.hasOwnProperty(key) && Array.isArray(obj[key])) {
-		if (obj[key].length > 1) {
-			return obj[key].slice().reduce((acc, cur) => acc * cur, 1);
-		}
-	}
-	return 0;
+  if (obj.hasOwnProperty(key) && Array.isArray(obj[key])) {
+    if (obj[key].length > 1) {
+      return obj[key].slice().reduce((acc, cur) => acc * cur, 1);
+    }
+  }
+  return 0;
 }
 
 /*
@@ -1296,14 +1296,14 @@ In order to use some of the methods that will be most helpful to you, you will m
 Be sure to familiarize yourself with the "toString" method, as well as the "Number" function.
 */
 function sumDigits(num) {
-	let stringified = num.toString().split("");
-	if (stringified[0] === "-") {
-		stringified[1] = stringified[0] + stringified[1];
-		stringified.splice(0, 1);
-	}
-	return stringified.reduce((acc, cur) => {
-		return Number(acc) + Number(cur);
-	}, 0);
+  let stringified = num.toString().split("");
+  if (stringified[0] === "-") {
+    stringified[1] = stringified[0] + stringified[1];
+    stringified.splice(0, 1);
+  }
+  return stringified.reduce((acc, cur) => {
+    return Number(acc) + Number(cur);
+  }, 0);
 }
 /*
 Write a function called "getSumOfAllElementsAtProperty".
@@ -1322,12 +1322,12 @@ var output = getSumOfAllElementsAtProperty(obj, 'key');
 console.log(output); // --> 13
 */
 function getSumOfAllElementsAtProperty(obj, key) {
-	if (obj.hasOwnProperty(key) && Array.isArray(obj[key])) {
-		if (obj[key].length > 1) {
-			return obj[key].reduce((a, c) => a + c, 0);
-		}
-	}
-	return 0;
+  if (obj.hasOwnProperty(key) && Array.isArray(obj[key])) {
+    if (obj[key].length > 1) {
+      return obj[key].reduce((a, c) => a + c, 0);
+    }
+  }
+  return 0;
 }
 
 /*
@@ -1346,17 +1346,17 @@ console.log(output); // --> 'two'
 */
 
 function findShortestWordAmongMixedElements(arr) {
-	let newArr = [];
-	for (let elem of arr) {
-		if (typeof elem === "string") {
-			newArr.push(elem);
-		}
-	}
+  let newArr = [];
+  for (let elem of arr) {
+    if (typeof elem === "string") {
+      newArr.push(elem);
+    }
+  }
 
-	if (newArr.length > 0) {
-		return newArr.sort((a, b) => a.length - b.length)[0];
-	}
-	return "";
+  if (newArr.length > 0) {
+    return newArr.sort((a, b) => a.length - b.length)[0];
+  }
+  return "";
 }
 
 /*
@@ -1372,17 +1372,17 @@ var output = findSmallestNumberAmongMixedElements([4, 'lincoln', 9, 'octopus']);
 console.log(output); // --> 4
 */
 function findSmallestNumberAmongMixedElements(arr) {
-	let newArr = [];
-	for (let elem of arr) {
-		if (typeof elem === "number") {
-			newArr.push(elem);
-		}
-	}
+  let newArr = [];
+  for (let elem of arr) {
+    if (typeof elem === "number") {
+      newArr.push(elem);
+    }
+  }
 
-	if (newArr.length > 0) {
-		return newArr.sort((a, b) => a - b)[0];
-	}
-	return 0;
+  if (newArr.length > 0) {
+    return newArr.sort((a, b) => a - b)[0];
+  }
+  return 0;
 }
 
 /*
@@ -1398,17 +1398,17 @@ var output = getLongestWordOfMixedElements([3, 'word', 5, 'up', 3, 1]);
 console.log(output); // --> 'word'
 */
 function getLongestWordOfMixedElements(arr) {
-	let newArr = [];
-	for (let elem of arr) {
-		if (typeof elem === "string") {
-			newArr.push(elem);
-		}
-	}
+  let newArr = [];
+  for (let elem of arr) {
+    if (typeof elem === "string") {
+      newArr.push(elem);
+    }
+  }
 
-	if (newArr.length > 0) {
-		return newArr.sort((a, b) => b.length - a.length)[0];
-	}
-	return "";
+  if (newArr.length > 0) {
+    return newArr.sort((a, b) => b.length - a.length)[0];
+  }
+  return "";
 }
 
 /*
@@ -1425,17 +1425,17 @@ var output = getLargestNumberAmongMixedElements([3, 'word', 5, 'up', 3, 1]);
 console.log(output); // --> 5
 */
 function getLargestNumberAmongMixedElements(arr) {
-	let newArr = [];
-	for (let elem of arr) {
-		if (typeof elem === "number") {
-			newArr.push(elem);
-		}
-	}
+  let newArr = [];
+  for (let elem of arr) {
+    if (typeof elem === "number") {
+      newArr.push(elem);
+    }
+  }
 
-	if (newArr.length > 0) {
-		return newArr.sort((a, b) => b - a)[0];
-	}
-	return 0;
+  if (newArr.length > 0) {
+    return newArr.sort((a, b) => b - a)[0];
+  }
+  return 0;
 }
 
 /*
@@ -1450,9 +1450,9 @@ var output = computeSummationToN(6);
 console.log(output); // --> 21
 */
 function computeSummationToN(n) {
-	let sum = 0;
-	for (let i = 0; i <= n; i++) {
-		sum += i;
-	}
-	return sum;
+  let sum = 0;
+  for (let i = 0; i <= n; i++) {
+    sum += i;
+  }
+  return sum;
 }
