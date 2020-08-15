@@ -1,6 +1,8 @@
 ## Big O With Objects
 
-### Why are Objects Are Great?
+## Objects
+
+### Why are Objects Great?
 
 - If you do not need to know the order of information.
 - If you need quick access to values -> `O(1)`
@@ -11,14 +13,17 @@
 - `Object.keys()` -> `O(n)`
 - `Object.values()` -> `O(n)`
 - `Object.entries()` -> `O(n)`
-  The three above are creating an array based upon the number of keys or values. So as the number of keys or values increases in the obj, or _n_, so does the newly created array. This causes the operation to be `O(n)` and not constant
+
+The three above are creating an array based upon the number of keys or values. So as the number of keys or values increases in the obj, or _n_, so does the newly created array. This causes the operation to be `O(n)` and not constant
 
 **However** since accessing values in an object is constant, and since we know the key value we want to check, `.hasOwnProperty()` takes the key and will try to access the value from the obj in the same way.
 `Object.hasOwnProperty()` -> `O(1)`
 
+---
+
 ## Arrays
 
-### Why are Arrays Are Great?
+### Why are Arrays Great?
 
 - You need order for your information, **but not the only option for ordering data**
 - If you need quick access to values -> `O(1)` if you know what the index is.
@@ -29,5 +34,18 @@
    - If you push to the end of the array, that is constant time `O(1)`
    - Inserting at the beginning causes the array to have to re-index existing values. `O(n)`
 2. **Removal** -> depends
+
    - Removing from beginning causes the array to have to re-index existing values. `O(n)`
    - If you pop off from the end of the array, that is constant time `O(1)`
+
+### The Cost of Built-in Methods
+
+- `.push()` - `O(1)`
+- `.pop()` - `O(1)`
+- `.shift()` - `O(N)`
+- `.unshift()` - `O(N)`
+- `.concat()` - `O(N)`
+- `.slice()` - `O(N)`
+- `.splice()` - `O(N)`
+- `.sort()` - `O(N * Log N)`
+- `.forEach()/map()/filter()/reduce()` - `O(N)`
