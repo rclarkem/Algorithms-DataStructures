@@ -54,10 +54,8 @@ console.log("HOCUS POCUS".toLowerCase());
 // Challenge 4: toLowerCase() - WRITE CODE BELOW
 
 function palindrome(str) {
-  debugger;
   let newStr = str.toLowerCase();
   let reverseStr = "";
-  console.log(newStr);
   for (let i = newStr.length - 1; i >= 0; i--) {
     reverseStr += newStr[i];
   }
