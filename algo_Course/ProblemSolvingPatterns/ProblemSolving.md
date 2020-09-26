@@ -21,6 +21,10 @@
 
 ### Break Down Problem
 
+1. Write down the in clear steps, what you need to solve and get.
+   - This allows for a better understanding of inputs and outputs and any caveats the question may be telling you.
+2. For your function(s), start by writing down what you will need to do in clear steps.
+
 ## Resources
 
 [George Polya - How to Solve It: A New Aspect of Mathematical Method](https://www.amazon.com/How-Solve-Mathematical-Princeton-Science/dp/069111966X)
