@@ -25,6 +25,12 @@
    - This allows for a better understanding of inputs and outputs and any caveats the question may be telling you.
 2. For your function(s), start by writing down what you will need to do in clear steps.
 
+### Problem Solving/Simplify
+
+1. If you know that the problem you are beginning to solve is difficult or has a part you will get stuck on, ignore that difficulty to at least get started on the problem.
+2. write simplified solution.
+3. Then try to work back in the difficulty into your function.
+
 ## Resources
 
 [George Polya - How to Solve It: A New Aspect of Mathematical Method](https://www.amazon.com/How-Solve-Mathematical-Princeton-Science/dp/069111966X)
