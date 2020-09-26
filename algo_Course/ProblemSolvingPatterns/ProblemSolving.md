@@ -39,6 +39,15 @@
    - can you improve the performance i.e Big O
    - style guide
 
+### Interview Strategies
+
+1. UNDERSTAND PROBLEM
+2. THINK OF EXAMPLES
+3. SIMPLIFY PROBLEM
+   - DONT CONFUSE YOURSELF!
+4. IMPROVE YOUR CODE
+   - REFACTOR
+
 ## Resources
 
 [George Polya - How to Solve It: A New Aspect of Mathematical Method](https://www.amazon.com/How-Solve-Mathematical-Princeton-Science/dp/069111966X)
