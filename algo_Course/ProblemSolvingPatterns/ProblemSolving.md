@@ -31,6 +31,14 @@
 2. write simplified solution.
 3. Then try to work back in the difficulty into your function.
 
+### Look Back and Refactor
+
+1. Is there a better way to do this?
+
+   - can you do this in a different way?
+   - can you improve the performance i.e Big O
+   - style guide
+
 ## Resources
 
 [George Polya - How to Solve It: A New Aspect of Mathematical Method](https://www.amazon.com/How-Solve-Mathematical-Princeton-Science/dp/069111966X)
