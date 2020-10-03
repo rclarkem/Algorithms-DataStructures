@@ -164,6 +164,8 @@ A very popular algorithm for sorting algorithms.
 
 We take a set of data and divide it into pieces rather moving left to right or vice versa.
 
+_For Ex:_ dividing an array at the middle and checking if the value is < or > your value and keep going.
+
 _Key of when to use_: **When the problem tells you to find something especially when the array is SORTED.**
 
 - Great for time complexity!
