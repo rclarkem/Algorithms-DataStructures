@@ -171,3 +171,8 @@ _Key of when to use_: **When the problem tells you to find something especially 
 - Great for time complexity!
 
 - It can be Log(N) - for ex: Binary Search
+
+# Resources:
+
+- geeksforgeeks.org
+- [Algorithms CS Dojo](https://goo.gl/wy3CWF)
