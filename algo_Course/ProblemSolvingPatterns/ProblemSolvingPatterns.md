@@ -157,3 +157,15 @@ largestSubArray([2, 6, 9, 2, 1, 8, 5, 6, 3], 3); // 8,5,6 => 19
 TIME: O(N)
 
 ---
+
+## Divide and Conquer
+
+A very popular algorithm for sorting algorithms.
+
+We take a set of data and divide it into pieces rather moving left to right or vice versa.
+
+_Key of when to use_: **When the problem tells you to find something especially when the array is SORTED.**
+
+- Great for time complexity!
+
+- It can be Log(N) - for ex: Binary Search
