@@ -106,3 +106,17 @@ countUniqueValues([1, 2, 3, 4, 4, 4, 7, 7, 12, 12, 13]); //7
 ---
 
 ## Sliding Windows
+
+Create a **window** that can be an array or number from one position to another
+
+- Window increases
+
+_Key of when to use_: **When the problem is asking you to keep track of highest count or largest subset of 'x' for example.**
+
+- or closes (new window is then created)
+
+- Great for keeping track of subset of data in array or string.
+
+- Its usually O(N).
+
+### Example
