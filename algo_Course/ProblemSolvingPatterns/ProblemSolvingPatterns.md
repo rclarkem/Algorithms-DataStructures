@@ -113,6 +113,8 @@ Create a **window** that can be an array or number from one position to another
 
 _Key of when to use_: **When the problem is asking you to keep track of highest count or largest subset of 'x' for example.**
 
+**Think of this technique as for set of data, complete x function, then move onto the next set and discard what you dont need**
+
 - or closes (new window is then created)
 
 - Great for keeping track of subset of data in array or string.
@@ -120,3 +122,38 @@ _Key of when to use_: **When the problem is asking you to keep track of highest 
 - Its usually O(N).
 
 ### Example
+
+```js
+function largestSubArray(arr, num) {
+  if (arr.length < 0 || arr.length < num) {
+    return undefined;
+  }
+
+  let tempSum = 0; //this will be the window that will move depending on condition.
+
+  let maxSum = 0; //this will keep our highest sum
+
+  for (let i = 0; i < num; i++) {
+    maxSum += arr[i]; //current highest sum
+  }
+
+  tempSum = maxSum;
+  for (let i = num; i < arr.length; i++) {
+    tempSum = tempSum - arr[i - num] + arr[i];
+    /* take the tempSum that was set with the maxSum initially, then on each iteration move the window and discard the previous number and add the previous number to the total.
+
+maxSum = (2 + 6 + 9) => 17, on the start of the loop we start at the 3rd or num index. What we want is to add the next group of three nums 6 + 9 + 2. This is where the window sliding comes in.
+
+ All we had to do was subtract the arr[i - num] which is the the (current index - the number) we are looking for and that will discard what we dont need and we add the current number/index we are on to tempSum  */
+    maxSum = Math.max(maxSum, tempSum);
+    // Now compare the two values.
+  }
+  return maxSum;
+}
+
+largestSubArray([2, 6, 9, 2, 1, 8, 5, 6, 3], 3); // 8,5,6 => 19
+```
+
+TIME: O(N)
+
+---
