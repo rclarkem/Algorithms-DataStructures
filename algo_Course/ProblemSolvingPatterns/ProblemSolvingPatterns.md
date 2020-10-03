@@ -21,11 +21,13 @@ Uses an object or set to collect values/frequency of value.
 
 _Key of when to use_: **When the problem asks how many times something occurs or the most/least occuring element. Or to compare two things and see if they have similar characteristics such as anagram.**
 
-- Great for avoiding nested loops or O(n<sup>2</sup>) operations.
+- Great for avoiding nested loops or O(N<sup>2</sup>) operations.
 
-- Its usually O(n).
+- Its usually O(N).
 
 ### Example:
+
+we use the objects to hold count of the values and their frequency. We dont have to rely on nested loops and look up for objects are constant time. We can achieve O(N) instead of O(N<sup>2</sup>)
 
 ```js
 function validAnagram(word1, word2) {
@@ -56,3 +58,15 @@ function validAnagram(word1, word2) {
 // validAnagram('', '') //true
 validAnagram('anagram', 'nagaram'); //true
 ```
+
+- TIME: O(N)
+
+---
+
+## Multiple Pointers
+
+Creating pointers or values that connect to an index that move towards a specific point based on a condition.
+
+- Its usually O(N).
+
+- Great for space complexity!
