@@ -15,6 +15,8 @@ Some examples of common algorithm patterns:
 
 Think of these as blueprints to starting your problems.
 
+---
+
 ## Frequency Counter
 
 Uses an object or set to collect values/frequency of value.
@@ -67,6 +69,40 @@ validAnagram('anagram', 'nagaram'); //true
 
 Creating pointers or values that connect to an index that move towards a specific point based on a condition.
 
+_Key of when to use_: **When the problem tells you to find something especially when the array or string is SORTED.**
+
 - Its usually O(N).
 
 - Great for space complexity!
+
+### Example
+
+```js
+function countUniqueValues(arr) {
+  if (arr.length === 0) {
+    return 0;
+  }
+  /* You could use a for loop too! I just happened to use a while loop. 
+	The logic would be the same. */
+  let i = 0;
+  let j = 1;
+  while (j < arr.length) {
+    if (arr[i] === arr[j]) {
+      j++;
+    } else {
+      i++;
+      arr[i] = arr[j];
+    }
+  }
+
+  return i + 1;
+}
+// countUniqueValues([1,1,1,1,2]) //2
+countUniqueValues([1, 2, 3, 4, 4, 4, 7, 7, 12, 12, 13]); //7
+```
+
+- TIME: O(N)
+
+---
+
+## Sliding Windows
