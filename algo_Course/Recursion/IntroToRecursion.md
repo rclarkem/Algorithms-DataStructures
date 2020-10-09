@@ -75,3 +75,34 @@ function addRange(num) {
 }
 addRange(5); // RETURN 15
 ```
+
+Ex: Factorials
+
+```js
+function factorial(num) {
+  if (num === 1) return 1;
+  return num * factorial(num - 1);
+}
+factorial(5); //120
+```
+
+Same idea as in the addRange function in that our function calls are waiting for the return values of the factorial(num - 1) before they can return and pop off the call stack.
+
+When we do `return num * factorial(num-1)` on the first go =>
+
+- `5 * factorial(4)`, we need to know what the return value is of the function call `factorial(4)`. However, the function knows that num is not `1` yet so it keeps going.
+- `4 * factorial(3)`
+- `3 * factorial(2)`
+- `2 * factorial(1)` => NUM = 1
+
+_WE HIT THE BASE CASE NOW_
+
+- return value of `factorial(1)` = 1; go back up the call stack!!!
+  <br></br>
+
+- `2 * factorial(1)` => 2 \* 1 = factorial(2) = **2**
+- `3 * factorial(2)` => 3 \* 2 = factorial(3) = **6**
+- `4 * factorial(3)` => 4 \* 6 = factorial(4) = **24**
+- `5 * factorial(4)` => 5 \* 24 = factorial(5) = **120**
+
+The return value is _120_
