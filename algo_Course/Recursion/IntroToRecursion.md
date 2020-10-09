@@ -97,7 +97,7 @@ When we do `return num * factorial(num-1)` on the first go =>
 
 _WE HIT THE BASE CASE NOW_
 
-- return value of `factorial(1)` = 1; go back up the call stack!!!
+- return value of `factorial(1)` = **1**; go back up the call stack!!!
   <br></br>
 
 - `2 * factorial(1)` => 2 \* 1 = factorial(2) = **2**
@@ -106,3 +106,19 @@ _WE HIT THE BASE CASE NOW_
 - `5 * factorial(4)` => 5 \* 24 = factorial(5) = **120**
 
 The return value is _120_
+
+---
+
+## Issues with Recursion
+
+1.  FORGETTING A BASE CASE!!!!
+
+- This can lead to maximum call stack exceeded error and even freezing.
+
+2.  Not returning your values.
+
+---
+
+## Helper Method Recursion
+
+You have an outer function thats not recursive and then it invokes an inner function which is recursive.
