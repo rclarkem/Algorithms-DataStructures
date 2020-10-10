@@ -122,3 +122,17 @@ The return value is _120_
 ## Helper Method Recursion
 
 You have an outer function thats not recursive and then it invokes an inner function which is recursive.
+
+### TIPS: When Using Pure Recursion
+
+1. Arrays:
+
+- use methods like _slice_, _spread operator_ and _concat_
+
+2. Strings:
+
+- _slice_, _substr_, _substring_
+
+3. Objects:
+
+- _Object.assign_, _spread operator_
