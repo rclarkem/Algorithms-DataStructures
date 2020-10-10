@@ -36,7 +36,7 @@ OUTPUT: "JAVASCRIPT JUMPSTART";
 
 */
 
-console.log("Let the games begin".toUpperCase());
+console.log('Let the games begin'.toUpperCase());
 // Challenge 3: toUpperCase() - WRITE CODE BELOW
 
 /* Challenge - Practice using Strings  
@@ -50,12 +50,12 @@ EX: "FULLSTACK ACADEMEY".toLowerCase()
 OUTPUT: "fullstack academy";
 
 */
-console.log("HOCUS POCUS".toLowerCase());
+console.log('HOCUS POCUS'.toLowerCase());
 // Challenge 4: toLowerCase() - WRITE CODE BELOW
 
 function palindrome(str) {
   let newStr = str.toLowerCase();
-  let reverseStr = "";
+  let reverseStr = '';
   for (let i = newStr.length - 1; i >= 0; i--) {
     reverseStr += newStr[i];
   }
@@ -65,23 +65,23 @@ function palindrome(str) {
   }
   return false;
 }
-palindrome("aCaraManaMaraca");
+palindrome('aCaraManaMaraca');
 
 function firstRepeatingLetter(str) {
-  let newStr = str.toLowerCase().replace(/[\s]/g, "");
+  let newStr = str.toLowerCase().replace(/[\s]/g, '');
   for (let i = 0; i < newStr.length; i) {
     // console.log(newStr[i])
-    console.log(newStr.lastIndexOf("d"));
+    console.log(newStr.lastIndexOf('d'));
     if (newStr.lastIndexOf(newStr[i]) !== newStr.indexOf(newStr[i])) {
       return newStr[i];
     }
   }
-  return "No repeats";
+  return 'No repeats';
 }
 
-firstRepeatingLetter("Grace Hopper"); //-> returns "r"
-firstRepeatingLetter("Shanna"); //-> returns "a"
-firstRepeatingLetter("Nimit"); //-> returns "d"
+firstRepeatingLetter('Grace Hopper'); //-> returns "r"
+firstRepeatingLetter('Shanna'); //-> returns "a"
+firstRepeatingLetter('Nimit'); //-> returns "d"
 
 function getHeight(cycles) {
   let height = 1;
@@ -98,17 +98,17 @@ function getHeight(cycles) {
 getHeight(3); // 6
 
 function rightTriangle(rows) {
-  let store = "";
+  let store = '';
   for (let i = rows; i > 0; i--) {
-    console.log("I:", i);
+    console.log('I:', i);
     for (let j = 0; j < i; j++) {
-      console.log("j:", j);
-      store += "*";
+      console.log('j:', j);
+      store += '*';
     }
     if (i === 1) {
       break;
     } else {
-      store += "\n";
+      store += '\n';
     }
   }
   return store;
@@ -132,8 +132,8 @@ function indexOf(str, queryStr) {
     }
   }
 }
-indexOf("helloWorld", "o"); // 4
-indexOf("helloWorld", "World"); // 5``
+indexOf('helloWorld', 'o'); // 4
+indexOf('helloWorld', 'World'); // 5``
 
 function sumAll(arr) {
   let newArr = [];
@@ -163,7 +163,7 @@ factorialize(5);
 
 function findLongestWord(str) {
   var count = 0;
-  var newStr = str.split(" ");
+  var newStr = str.split(' ');
   // console.log(newStr)
   for (var i = 0; i < newStr.length; i++) {
     if (newStr[i].length > count) {
@@ -173,7 +173,7 @@ function findLongestWord(str) {
   return count;
 }
 
-findLongestWord("May the force be with you");
+findLongestWord('May the force be with you');
 
 // function findLongestWord(str) {
 // 	var array = str.split(' ')
@@ -185,7 +185,7 @@ findLongestWord("May the force be with you");
 // findLongestWord('The quick brown fox jumped over the lazy dog')
 
 function titleCase(str) {
-  var newStr = str.toLowerCase().split(" ");
+  var newStr = str.toLowerCase().split(' ');
   //newStr.toLowerCase()
   console.log(newStr);
 
@@ -193,7 +193,7 @@ function titleCase(str) {
     return val.replace(val.charAt(0), val.charAt(0).toUpperCase());
   });
 
-  return newString.join(" ");
+  return newString.join(' ');
 }
 
 titleCase("I'm a little tea pot");
@@ -205,7 +205,7 @@ function largestOfFour(arr) {
     for (var j = 0; j < arr[i].length; j++) {
       if (arr[i][j] > largest) {
         largest = arr[i][j];
-        console.log(largest, "iteration");
+        console.log(largest, 'iteration');
         console.log(arr[0][1]);
       }
     }
@@ -222,7 +222,7 @@ largestOfFour([
 ]);
 
 function myMnemonic(str1, str2, str3, str4) {
-  let newStr = "";
+  let newStr = '';
   if (str1 !== undefined) {
     newStr += str1[0];
   }
@@ -237,32 +237,32 @@ function myMnemonic(str1, str2, str3, str4) {
   }
   return newStr;
 }
-myMnemonic("Must", "Accept", "Sugar", "Happiness"); // => MASH
+myMnemonic('Must', 'Accept', 'Sugar', 'Happiness'); // => MASH
 
 var contacts = [
   {
-    firstName: "Akira",
-    lastName: "Laine",
-    number: "0543236543",
-    likes: ["Pizza", "Coding", "Brownie Points"],
+    firstName: 'Akira',
+    lastName: 'Laine',
+    number: '0543236543',
+    likes: ['Pizza', 'Coding', 'Brownie Points'],
   },
   {
-    firstName: "Harry",
-    lastName: "Potter",
-    number: "0994372684",
-    likes: ["Hogwarts", "Magic", "Hagrid"],
+    firstName: 'Harry',
+    lastName: 'Potter',
+    number: '0994372684',
+    likes: ['Hogwarts', 'Magic', 'Hagrid'],
   },
   {
-    firstName: "Sherlock",
-    lastName: "Holmes",
-    number: "0487345643",
-    likes: ["Intriguing Cases", "Violin"],
+    firstName: 'Sherlock',
+    lastName: 'Holmes',
+    number: '0487345643',
+    likes: ['Intriguing Cases', 'Violin'],
   },
   {
-    firstName: "Kristian",
-    lastName: "Vos",
-    number: "unknown",
-    likes: ["JavaScript", "Gaming", "Foxes"],
+    firstName: 'Kristian',
+    lastName: 'Vos',
+    number: 'unknown',
+    likes: ['JavaScript', 'Gaming', 'Foxes'],
   },
 ];
 
@@ -272,15 +272,15 @@ function lookUpProfile(name, prop) {
       if (contacts[i].hasOwnProperty(prop)) {
         return contacts[i][prop];
       } else {
-        return "No such property";
+        return 'No such property';
       }
     }
   }
-  return "No such contact";
+  return 'No such contact';
   // Only change code above this line
 }
 
-lookUpProfile("Bob", "potato");
+lookUpProfile('Bob', 'potato');
 
 function sum(arr, n) {
   // Only change code below this line
@@ -296,29 +296,29 @@ sum([2, 3, 4], 2); // 2
 
 var collection = {
   2548: {
-    album: "Slippery When Wet",
-    artist: "Bon Jovi",
-    tracks: ["Let It Rock", "You Give Love a Bad Name"],
+    album: 'Slippery When Wet',
+    artist: 'Bon Jovi',
+    tracks: ['Let It Rock', 'You Give Love a Bad Name'],
   },
   2468: {
-    album: "1999",
-    artist: "Prince",
-    tracks: ["1999", "Little Red Corvette"],
+    album: '1999',
+    artist: 'Prince',
+    tracks: ['1999', 'Little Red Corvette'],
   },
   1245: {
-    artist: "Robert Palmer",
+    artist: 'Robert Palmer',
     tracks: [],
   },
   5439: {
-    album: "ABBA Gold",
+    album: 'ABBA Gold',
   },
 };
 
 // Only change code below this line
 function updateRecords(id, prop, value) {
-  if (value === "") {
+  if (value === '') {
     delete collection[id][prop];
-  } else if (prop === "tracks") {
+  } else if (prop === 'tracks') {
     collection[id][prop] = collection[id][prop] || [];
     collection[id][prop].push(value);
   } else {
@@ -327,14 +327,14 @@ function updateRecords(id, prop, value) {
   return collection;
 }
 
-updateRecords(1245, "tracks", "Take a Chance on Me");
+updateRecords(1245, 'tracks', 'Take a Chance on Me');
 
 var arr1 = [5, 10, 15, 20];
 var arr2 = [15, 88, 1, 5, 7];
 var arr3 = [1, 10, 15, 5, 20];
 function intersection(arr) {
   return arr.reduce(function (acc, curr) {
-    console.log("acc:", acc, "curr:", curr);
+    console.log('acc:', acc, 'curr:', curr);
     let result = [];
     for (var i = 0; i < acc.length; i++) {
       if (curr.includes(acc[i])) {
@@ -372,15 +372,15 @@ console.log(getRemainder(17, 5)); //=> 2
 function gradeCalculator(grade) {
   let result;
   if (grade >= 90) {
-    result = "A";
+    result = 'A';
   } else if (grade >= 80) {
-    result = "B";
+    result = 'B';
   } else if (grade >= 70) {
-    result = "C";
+    result = 'C';
   } else if (grade >= 60) {
-    result = "D";
+    result = 'D';
   } else if (grade <= 50) {
-    result = "F";
+    result = 'F';
   }
   return result;
 }
@@ -404,8 +404,8 @@ function arrayBuilder(obj) {
 console.log(arrayBuilder({ cats: 2, dogs: 1 })); //=> ['cats', 'cats', 'dogs']
 console.log(arrayBuilder({})); //=> []
 
-var arr1 = ["hi", "howdy", "bye", "later", "hello"];
-var arr2 = ["HI", "Howdy", "BYE", "later", "HELLO"];
+var arr1 = ['hi', 'howdy', 'bye', 'later', 'hello'];
+var arr2 = ['HI', 'Howdy', 'BYE', 'later', 'HELLO'];
 function uppercaser(str) {
   return str.toUpperCase();
 }
@@ -430,7 +430,7 @@ function capitalize(str) {
 function repeater(str) {
   return str + str;
 }
-var items = ["catfood", "glue", "beer"];
+var items = ['catfood', 'glue', 'beer'];
 var functions = [uppercaser, capitalize, repeater];
 
 function multiMap(arr, functionsArr) {
@@ -487,9 +487,9 @@ function prioritize(arr, callback) {
 }
 //
 function startsWithS(str) {
-  return str[0].toLowerCase() === "s";
+  return str[0].toLowerCase() === 's';
 }
-var tvShows = ["curb", "rickandmorty", "seinfeld", "sunny", "friends"];
+var tvShows = ['curb', 'rickandmorty', 'seinfeld', 'sunny', 'friends'];
 console.log(prioritize(tvShows, startsWithS)); // should log: ['seinfeld', 'sunny', 'curb', 'rickandmorty', 'friends']
 
 function countBy(arr, callback) {
@@ -509,8 +509,8 @@ function countBy(arr, callback) {
 }
 //
 function evenOdd(n) {
-  if (n % 2 === 0) return "even";
-  else return "odd";
+  if (n % 2 === 0) return 'even';
+  else return 'odd';
 }
 var nums = [1, 2, 3, 4, 5];
 console.log(countBy(nums, evenAndOdd)); // should log: { odd: 3, even: 2 }
@@ -554,7 +554,7 @@ groupBy(decimals, evenOdd);
 // 	}
 // }
 
-var sunny = { mac: "priest", dennis: "calculating", charlie: "birdlaw", dee: "bird", frank: "warthog" };
+var sunny = { mac: 'priest', dennis: 'calculating', charlie: 'birdlaw', dee: 'bird', frank: 'warthog' };
 
 function goodKeys(obj, callback) {
   let base = [];
@@ -569,14 +569,14 @@ function goodKeys(obj, callback) {
 }
 
 function startsWithBird(str) {
-  return str.slice(0, 4).toLowerCase() === "bird";
+  return str.slice(0, 4).toLowerCase() === 'bird';
 }
 
 console.log(goodKeys(sunny, startsWithBird)); // should log: ['charlie', 'dee']
 
 function createFunction() {
   function helloWorld() {
-    return "Hello World";
+    return 'Hello World';
   }
   return helloWorld;
 }
@@ -605,7 +605,7 @@ function partlist(arr) {
     console.log(newArray);
   }
 }
-partlist(["az", "toto", "picaro", "zone", "kiwi"]);
+partlist(['az', 'toto', 'picaro', 'zone', 'kiwi']);
 
 function censor() {
   let storedStrings1 = {};
@@ -617,7 +617,7 @@ function censor() {
       // console.log(storedStrings1)
     } else {
       for (let prop in storedStrings1) {
-        console.log(str1, "str1");
+        console.log(str1, 'str1');
         str1 = str1.replace(prop, storedStrings1[prop]);
       }
       return str1;
@@ -635,9 +635,9 @@ function censor() {
 
 //
 const changeScene = censor();
-changeScene("dogs", "cats");
-console.log(changeScene("quick", "slow"));
-console.log(changeScene("The quick, brown fox jumps over the lazy dogs.")); // should log: 'The slow, brown fox jumps over the lazy cats.'
+changeScene('dogs', 'cats');
+console.log(changeScene('quick', 'slow'));
+console.log(changeScene('The quick, brown fox jumps over the lazy dogs.')); // should log: 'The slow, brown fox jumps over the lazy cats.'
 storedStrings.push(...args);
 console.log(storedStrings);
 console.log(storedStrings);
@@ -649,7 +649,7 @@ function makePerson(name, age) {
   return obj;
 }
 
-const vicky = makePerson("Vicky", 24);
+const vicky = makePerson('Vicky', 24);
 
 // Uncomment these lines to check your work!
 console.log(vicky.name); // -> Logs 'Vicky'
@@ -657,7 +657,7 @@ console.log(vicky.age); // -> Logs 24
 
 const personStore = {
   greet: function () {
-    console.log("hello");
+    console.log('hello');
   },
 };
 
@@ -668,7 +668,7 @@ function personFromPersonStore(name, age) {
   return person;
 }
 
-const sandra = personFromPersonStore("Sandra", 26);
+const sandra = personFromPersonStore('Sandra', 26);
 personStore.introduce = function () {
   console.log(`Hi, my name is ${this.name}`);
 };
@@ -679,7 +679,7 @@ sandra.introduce(); // -> Logs 'Hi, my name is Sandra'
 
 function PersonConstructor() {
   this.greet = function () {
-    console.log("hello");
+    console.log('hello');
   };
 }
 
@@ -699,7 +699,7 @@ var simon = new PersonConstructor();
 // }
 // var simon = new PersonConstructor;
 
-const mike = personFromConstructor("Mike", 30);
+const mike = personFromConstructor('Mike', 30);
 
 // Uncomment these lines to check your work!
 console.log(mike.name); // -> Logs 'Mike'
@@ -707,7 +707,7 @@ console.log(mike.age); // -> Logs 30
 mike.greet(); // -> Logs 'hello'
 
 let dog = {
-  name: "Spot",
+  name: 'Spot',
   numLegs: 4,
   sayLegs: function () {
     return `This dog has ${dog.numLegs} legs.`;
@@ -719,12 +719,12 @@ dog.sayLegs();
 function pluralize(arr) {
   let newArr = [];
   for (let i = 0; i < arr.length; i++) {
-    newArr.push(arr[i] + "s");
+    newArr.push(arr[i] + 's');
   }
   return newArr;
 }
 //
-const animals = ["dog", "cat", "tree frog"];
+const animals = ['dog', 'cat', 'tree frog'];
 console.log(pluralize(animals));
 
 function subtractTwo(num) {
@@ -773,16 +773,16 @@ function good_Keys(obj, callback) {
   return newArr;
 }
 //
-const sunny = { mac: "priest", dennis: "calculator", charlie: "birdlaw", dee: "bird", frank: "warthog" };
+const sunny = { mac: 'priest', dennis: 'calculator', charlie: 'birdlaw', dee: 'bird', frank: 'warthog' };
 function startsWithBird(str) {
-  return str.slice(0, 4).toLowerCase() === "bird";
+  return str.slice(0, 4).toLowerCase() === 'bird';
 }
 console.log(goodKeys(sunny, startsWithBird)); // should log: ['charlie', 'dee']
 
 //
 function createFunction() {
   function helloWorld() {
-    return "hello world";
+    return 'hello world';
   }
   return helloWorld;
 }
@@ -798,16 +798,16 @@ function createFunctionWithInput(input) {
   return returnInput;
 }
 //
-const sampleFunc = createFunctionWithInput("sample");
+const sampleFunc = createFunctionWithInput('sample');
 console.log(sampleFunc()); // should log: 'sample'
-const helloFunc = createFunctionWithInput("hello");
+const helloFunc = createFunctionWithInput('hello');
 console.log(helloFunc()); // should log: 'hello'
 
 function outer() {
   var counter = 0; // this variable is outside incrementCounter's scope
   function incrementCounter() {
     counter++;
-    console.log("counter", counter);
+    console.log('counter', counter);
   }
   return incrementCounter;
 }
@@ -863,14 +863,14 @@ function after(num, callback) {
   function call() {}
 }
 const called = function (string) {
-  return "hello " + string;
+  return 'hello ' + string;
 };
 const afterCalled = after(3, called);
 
 // UNCOMMENT THESE LINES TO TEST YOUR WORK
-console.log(afterCalled("world")); // -> nothing is printed
-console.log(afterCalled("world")); // -> nothing is printed
-console.log(afterCalled("world")); // -> 'hello world' is printed
+console.log(afterCalled('world')); // -> nothing is printed
+console.log(afterCalled('world')); // -> nothing is printed
+console.log(afterCalled('world')); // -> 'hello world' is printed
 
 function once(callback) {
   let result;
@@ -910,19 +910,19 @@ function after(numOfTimes, callback) {
   return numberCalled;
 }
 const called = function (string) {
-  return "hello " + string;
+  return 'hello ' + string;
 };
 const afterCalled = after(3, called);
 
 // UNCOMMENT THESE LINES TO TEST YOUR WORK
-console.log(afterCalled("world")); // -> nothing is printed
-console.log(afterCalled("world")); // -> nothing is printed
-console.log(afterCalled("world")); // -> 'hello world' is printed
+console.log(afterCalled('world')); // -> nothing is printed
+console.log(afterCalled('world')); // -> nothing is printed
+console.log(afterCalled('world')); // -> 'hello world' is printed
 
 function saveOutput(callback, string) {
   let password = {};
   function replicate(s) {
-    if (typeof s !== "string") {
+    if (typeof s !== 'string') {
       password[s] = callback(s);
     } else {
       return password;
@@ -935,10 +935,10 @@ function saveOutput(callback, string) {
 const multiplyBy2 = function (num) {
   return num * 2;
 };
-const multBy2AndLog = saveOutput(multiplyBy2, "boo");
+const multBy2AndLog = saveOutput(multiplyBy2, 'boo');
 console.log(multBy2AndLog(2)); // should log: 4
 console.log(multBy2AndLog(9)); // should log: 18
-console.log(multBy2AndLog("boo")); // should log: { 2: 4, 9: 18 }'
+console.log(multBy2AndLog('boo')); // should log: { 2: 4, 9: 18 }'
 
 function cycleIterator(array) {
   let storedElem = 0;
@@ -953,7 +953,7 @@ function cycleIterator(array) {
 }
 
 //
-const threeDayWeekend = ["Fri", "Sat", "Sun"];
+const threeDayWeekend = ['Fri', 'Sat', 'Sun'];
 const getDay = cycleIterator(threeDayWeekend);
 console.log(getDay()); // should log: 'Fri'
 console.log(getDay()); // should log: 'Sat'
@@ -976,9 +976,9 @@ function censor() {
 }
 
 const changeScene = censor();
-changeScene("dogs", "cats");
-changeScene("quick", "slow");
-console.log(changeScene("The quick, brown fox jumps over the lazy dogs.")); // should log: 'The slow, brown fox jumps over the lazy cats.'
+changeScene('dogs', 'cats');
+changeScene('quick', 'slow');
+console.log(changeScene('The quick, brown fox jumps over the lazy dogs.')); // should log: 'The slow, brown fox jumps over the lazy cats.'
 
 function updateInventory(arr1, arr2) {
   arr1.forEach((elem) => {
@@ -1005,17 +1005,91 @@ function updateInventory(arr1, arr2) {
 // test
 // Example inventory lists
 var curInv = [
-  [2, "Dirty Sock"],
-  [21, "Bowling Ball"],
-  [1, "Hair Pin"],
-  [5, "Microphone"],
+  [2, 'Dirty Sock'],
+  [21, 'Bowling Ball'],
+  [1, 'Hair Pin'],
+  [5, 'Microphone'],
 ];
 
 var newInv = [
-  [2, "Hair Pin"],
-  [3, "Half-Eaten Apple"],
-  [67, "Bowling Ball"],
-  [7, "Toothpaste"],
+  [2, 'Hair Pin'],
+  [3, 'Half-Eaten Apple'],
+  [67, 'Bowling Ball'],
+  [7, 'Toothpaste'],
 ];
 
 updateInventory(curInv, newInv);
+
+function reverseStr(s) {
+  let start = 0;
+  let end = s.length - 1;
+
+  while (start < end) {
+    let temp = s[start];
+    s[start] = s[end];
+    s[end] = temp;
+    start++;
+    end--;
+  }
+  return s;
+}
+
+reverseStr(['h', 'e', 'l', 'l', 'o']);
+
+function checkSubSudoku(matrix) {
+  if (!numsAreValid(matrix) || !isBoardValid(matrix)) {
+    return 'INVALID';
+  }
+
+  let myobj = {};
+
+  for (let i = 0; i < matrix.length; i++) {
+    for (let j = 0; j < matrix.length; j++) {
+      const currentNum = matrix[i][j];
+      if (!myobj[`${currentNum} in row: ${i}`] && !myobj[`${currentNum} in column: ${j}`]) {
+        myobj[`${currentNum} in row: ${i}`] = true;
+        myobj[`${currentNum} in column: ${j}`] = true;
+      } else {
+        return 'INVALID';
+      }
+    }
+  }
+  return 'VALID';
+}
+
+function isBoardValid(matrix) {
+  return matrix.every(function (row) {
+    return row.length === matrix.length;
+  });
+}
+
+function numsAreValid(matrix) {
+  let numsRange = matrix[0];
+  let newArr = [];
+  for (let i = 1; i <= numsRange.length; i++) {
+    newArr.push(i);
+  }
+  for (let i = 0; i < matrix.length; i++) {
+    return newArr.every((item) => {
+      return matrix[i].includes(item);
+    });
+  }
+}
+
+//  numsAreValid([ [ 1000, -1000, 6 ], [ 2, 3, 1 ], [ 3, 1, 2 ] ])
+// numsAreValid([ [ 1, 2, 3 ],[ 1, 2, 3 ],[ 1, 2, 3 ] ])
+// checkSubSudoku([ [ 1, 2, 3 ],[ 1, 2, 3 ],[ 1, 2, 3 ] ])
+// checkSubSudoku(  [[1,2,3,4,5],[1,2,3,4],[1,2,3,4],[1]])
+// checkSubSudoku([ [ 1000, -1000, 6 ], [ 2, 3, 1 ], [ 3, 1, 2 ] ])
+//  checkSubSudoku([ -1, -2, -3 ], [ -2, -3, -1 ], [ -3, -1, -2 ])
+checkSubSudoku([
+  [1, 2, 3, 4],
+  [2, 3, 4, 1],
+  [3, 4, 1, 2],
+  [4, 1, 2, 3],
+]);
+checkSubSudoku([
+  [1, 2, 3],
+  [2, 3, 1],
+  [3, 1, 2],
+]);
