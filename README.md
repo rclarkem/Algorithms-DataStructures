@@ -17,7 +17,7 @@ I have organized this repo into folders to give it some structure. The ***js_pra
 
 Many of the prompts are written into the code, if you want to try the problems yourself without looking at my solutions to some of them. 
 
-### algo_course:
+### [algo_course](https://github.com/rclarkem/Algorithms-DataStructures/tree/master/algo_Course):
 The ***algo_Course*** folder is my notebook of lecture notes as I go through a udemy course I purchased.
 
 **I will not be including any resources directly from the course as I do not own the material, but have linked the course itself if you wish to purchase it.**
