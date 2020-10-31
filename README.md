@@ -9,7 +9,7 @@ This repo will also serve as a notebook and resource hub for various javascript 
 
 ## Structure
 
-### js_practice:
+### [js_practice](https://github.com/rclarkem/Algorithms-DataStructures/tree/master/js_practice):
 I have organized this repo into folders to give it some structure. The ***js_practice folder*** holds many of the algorithm problems I have tried to complete myself from a variety of resources such as: 
  - codewars
  - hackerrank
