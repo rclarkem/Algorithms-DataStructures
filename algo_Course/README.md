@@ -18,10 +18,10 @@ This is going to be my notebook as I follow the course by Colt Steele for learni
 
 ### Sections:
 
-- [Big O Notation](algo_Course/BigONotation)
-- [Performance of Arrays & Objects](algo_Course/ArraysAndObjects)
-- [Problem Solving Approach](algo_Course/ProblemSolvingPatterns)
-- [Recursion](algo_Course/Recursion)
+- [Big O Notation](https://github.com/rclarkem/Algorithms-DataStructures/blob/master/algo_Course/BigONotation/README_BigONotation.md)
+- [Performance of Arrays & Objects](https://github.com/rclarkem/Algorithms-DataStructures/blob/master/algo_Course/ArraysAndObjects/BigO_Obj_Arr.md)
+- [Problem Solving Approach](https://github.com/rclarkem/Algorithms-DataStructures/tree/master/algo_Course/ProblemSolvingPatterns)
+- [Recursion](https://github.com/rclarkem/Algorithms-DataStructures/tree/master/algo_Course/Recursion)
 - Search Algorithms
 - Bubble Sort
 - Selection Sort
